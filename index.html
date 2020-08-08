@@ -13,7 +13,9 @@
 
         <div class="card">
             <div class="card-section">
-
+                <div class="column">
+                    <span class="label" id="BudgetBallers">Budget Baller$</span>
+                </div>
                 <div class="column">
                     <nav class="menu">
                         <ol>
@@ -23,9 +25,6 @@
                         </ol>
                       </nav>
                 </div>
-                <div class="card-section">
-                    <div class="column"><div id="BudgetBallers">Budget Baller$</div></div>
-                </div>
             </div>
         </div>
 
@@ -33,65 +32,119 @@
     </div>
 
     <div class="card">
-        <div class="card-section">
             <div class="first-card">      
                 <h1>Welcome!</h1>
                 <p>Start building your budget now.</p>
-                <button>Click here!</button>
+                <button>Click Here!</button>
             </div>
-        </div>
     </div>
     
-    <div class="row">
-        <div class="columns medium-2 medium-4">
+    <div id="Body-Container">
+
+        <div class="row">
+
+            <div class="Main-Container" id="Main-Incomes">
+                
+                <div class="columns medium-4">
+                    <div class="card">
+                        <div id="Bank-Container">   
+                            <h1> Bank</h1>
+                            <p>100$</p>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="columns medium-4">
+                    <div class="card">
+                        <div id="Cards-Container">  
+                            <h1> Cards</h1>
+                            <p>100$</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns medium-4">
+                    <div class="card">
+                        <div id="Cash-Container">   
+                            <h1> Cash</h1>
+                            <p>100$</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div class="row">
+
             <div class="card">
-                <div class="card-section">
-                    <h2>Create your budget and display it in an easy to use format</h2>
+                <div id="Balance-Container">
+                    <p>Balance <span>900$</span></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <div id="Incomes-Container">
+                    <p>Incomes</p>
+                    <ul id="Income-List">
+                        <li>PayCheck 1000$ [Bank]</li>
+                        <li></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <div class="columns medium 10 medium-8">
+
+    
+        <div class="row">
             <div class="card">
-                <div class="card-section">
-                    <img src="./Assets/finance.jpg" alt="Graphical representation of your personal finances">
+                <div id="Payments-Container">
+            
+                    <div id="Outcomes-Container">
+                        <p>OutComes</p>
+                        <ul id="Outcome-List">
+
+                            <div class="row">
+                                
+                                <div class="columns small-4" id="outcomes-source">
+                                    <div class="card">[Cash]</div>
+                                </div>
+                                <div class="columns small-4" id="outcomes-name">
+                                    <div class="card">Gas: 50$</div>
+                                </div>
+                                <div class="columns small-4" id="outcomes-category">
+                                    <div class="card">(Transportation)</div>
+                                </div>
+
+                                <div class="columns small-4" id="outcomes-source">
+                                    <div class="card">[Cash]</div>
+                                </div>
+                                <div class="columns small-4" id="outcomes-name">
+                                    <div class="card">McDonalds: 5$</div>
+                                </div>
+                                <div class="columns small-4" id="outcomes-category">
+                                    <div class="card">(Food)</div>
+                                </div>
+
+                                <div class="columns small-4" id="outcomes-source">
+                                    <div class="card">[Bank]</div>
+                                </div>
+                                <div class="columns small-4" id="outcomes-name">
+                                    <div class="card">Netflix: 15$</div>
+                                </div>
+                                <div class="columns small-4" id="outcomes-category">
+                                    <div class="card">(Entertainment)</div>
+                                </div>
+                            </div>
+                    </div>
+            
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="row">
-        <div class="columns medium-2 medium-4">
-            <div class="card">
-                <div class="card-section">
-                    <img src="./Assets/calendar.png" alt="Calendar for year 2020">
-                </div>
-            </div>
-        </div>
-        <div class="columns medium 10 medium-8">
-            <div class="card">
-                <div class="card-section">
-                    <h2>See your bill planned out on your calendar</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="row">
-        <div class="columns medium-2 medium-4">
-            <div class="card">
-                <div class="card-section">
-                    <h2>Coordinate and calculate split payments for shared months</h2>
-                </div>
-            </div>
-        </div>
-        <div class="columns medium 10 medium-8">
-            <div class="card">
-                <div class="card-section">
-                    <img src="./Assets/budget.jpg" alt="Writing budget information on notepad with calculator on the side">
-                </div>
-            </div>
-        </div>
-    </div>
+    
     </div>
 </body>
 </html>

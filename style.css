@@ -11,8 +11,19 @@ body{
     text-align: left;
     font-size: 18px;
     content: center;
+
 }
 
 .first-card {
+    text-align: center;
+}
+
+#Balance-Container {
+    justify-content: center;
+    text-align: center;
+}
+
+#Incomes-Container {
+    justify-content: center;
     text-align: center;
 }
