@@ -14,9 +14,9 @@
         <div class="card">
             <div class="card-section">
                 <div class="column">
-                    <span class="label" id="BudgetBallers">Budget Baller$</span>
                 </div>
                 <div class="column">
+                    <span class="label" id="BudgetBallers">Budget Baller$</span>
                     <nav class="menu">
                         <ol>
                           <li><a href="#">Home</a></li>
@@ -35,7 +35,7 @@
             <div class="first-card">      
                 <h1>Welcome!</h1>
                 <p>Start building your budget now.</p>
-                <button>Click Here!</button>
+                <button type="button" class="success button">Click me!</button>
             </div>
     </div>
     
@@ -48,7 +48,7 @@
                 <div class="columns medium-4">
                     <div class="card">
                         <div id="Bank-Container">   
-                            <h1> Bank</h1>
+                            <h1>Bank</h1>
                             <p>100$</p>
                         </div>
                     </div>
@@ -91,8 +91,12 @@
                 <div id="Incomes-Container">
                     <p>Incomes</p>
                     <ul id="Income-List">
-                        <li>PayCheck 1000$ [Bank]</li>
-                        <li></li>
+                        <div class="columns large-6" id="outcomes-source">
+                            <div class="card">[Bank]</div>
+                        </div>
+                        <div class="columns large-6" id="outcomes-source">
+                            <div class="card">PayCheck 1000$</div>
+                        </div>
                     </ul>
                 </div>
             </div>
