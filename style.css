@@ -21,9 +21,25 @@ body{
 #Balance-Container {
     justify-content: center;
     text-align: center;
+    background: transparent;
 }
 
 #Incomes-Container {
     justify-content: center;
     text-align: center;
+    background: transparent;
+}
+
+#Outcomes-Container {
+    justify-content: center;
+    text-align: center;
+    background: transparent;
+}
+
+.card {
+    color: teal;
+}
+
+p {
+    color: teal; opacity: 150%;
 }
