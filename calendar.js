@@ -1,8 +1,11 @@
 $(document).ready(function () {
   // This section builds the calendar using for loops creating a table
+$('#month-generate').attr('style', 'margin: 200px;')
+
   var currentMonth = moment().format("MMMM");
   $("<h1>").text(currentMonth).prependTo("#month-name");
 
+  // Create Table Elemenet for the calendar to be written to
   $('<table>').appendTo('#month-generate');
 
   // creating table rows for each week
