@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Baller</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/plugins/foundation.orbit.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation-float.min.css">
 </head>
 <body>
 
     <div class="row">
 
-        <div class="card">
+        <div class="card" id="nav-bar">
             <div class="card-section">
                 <div class="column">
                 </div>
@@ -32,123 +33,25 @@
     </div>
 
     <div class="card">
-            <div class="first-card">      
-                <h1>Welcome!</h1>
-                <p>Start building your budget now.</p>
-                <button type="button" class="success button">Click me!</button>
+        <div class="row">
+            <div class="card-title">
+                <div class="columns medium-4"> 
+                    <button id="previous-month">Previous</button>
+                </div>
+                <div class="columns medium-4">
+                    <label id="month-name">August</label>
+                </div>
+                <div class="columns medium-4">
+                    <button id="next-month">Next</button>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="card" id="month-generate" style="text-align: center;">
+        <h1>August</h1>
     </div>
     
-    <div id="Body-Container">
-
-        <div class="row">
-
-            <div class="Main-Container" id="Main-Incomes">
-                
-                <div class="columns medium-4">
-                    <div class="card">
-                        <div id="Bank-Container">   
-                            <h1>Bank</h1>
-                            <p>100$</p>
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="columns medium-4">
-                    <div class="card">
-                        <div id="Cards-Container">  
-                            <h1> Cards</h1>
-                            <p>100$</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="columns medium-4">
-                    <div class="card">
-                        <div id="Cash-Container">   
-                            <h1> Cash</h1>
-                            <p>100$</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        
-        <div class="row">
-
-            <div class="card">
-                <div id="Balance-Container">
-                    <p>Balance <span>900$</span></p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <div class="card">
-                <div id="Incomes-Container">
-                    <p>Incomes</p>
-                    <ul id="Income-List">
-                        <div class="columns large-6" id="outcomes-source">
-                            <div class="card">[Bank]</div>
-                        </div>
-                        <div class="columns large-6" id="outcomes-source">
-                            <div class="card">PayCheck 1000$</div>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
     
-        <div class="row">
-            <div class="card">
-                <div id="Payments-Container">
-            
-                    <div id="Outcomes-Container">
-                        <p>OutComes</p>
-                        <ul id="Outcome-List">
-
-                            <div class="row">
-                                
-                                <div class="columns small-4" id="outcomes-source">
-                                    <div class="card">[Cash]</div>
-                                </div>
-                                <div class="columns small-4" id="outcomes-name">
-                                    <div class="card">Gas: 50$</div>
-                                </div>
-                                <div class="columns small-4" id="outcomes-category">
-                                    <div class="card">(Transportation)</div>
-                                </div>
-
-                                <div class="columns small-4" id="outcomes-source">
-                                    <div class="card">[Cash]</div>
-                                </div>
-                                <div class="columns small-4" id="outcomes-name">
-                                    <div class="card">McDonalds: 5$</div>
-                                </div>
-                                <div class="columns small-4" id="outcomes-category">
-                                    <div class="card">(Food)</div>
-                                </div>
-
-                                <div class="columns small-4" id="outcomes-source">
-                                    <div class="card">[Bank]</div>
-                                </div>
-                                <div class="columns small-4" id="outcomes-name">
-                                    <div class="card">Netflix: 15$</div>
-                                </div>
-                                <div class="columns small-4" id="outcomes-category">
-                                    <div class="card">(Entertainment)</div>
-                                </div>
-                            </div>
-                    </div>
-            
-                </div>
-            </div>
-        </div>
-    
-    </div>
 </body>
 </html>
