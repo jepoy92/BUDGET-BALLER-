@@ -1,7 +1,9 @@
 $(document).ready(function () {
   // This section builds the calendar using for loops creating a table
   var currentMonth = moment().format("MMMM YYYY");
-  $("<h1>").text(currentMonth).prependTo("#calendar-area");
+  $("<h1>").text(currentMonth).prependTo("#month-name");
+
+  $('<table>').appendTo('#month-generate');
 
   // creating table rows for each week
   for (let i = 0; i < 6; i++) {
@@ -11,7 +13,7 @@ $(document).ready(function () {
       .attr("style", "");
     $("table").append(newRow);
   }
-
+ 
   // Display weekday text
   // Array with days of the week
   var weekDayText = [
