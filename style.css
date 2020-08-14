@@ -14,6 +14,7 @@ body{
     font-size: 18px;
     font-style: italic;
     justify-content: center;
+    font-family: 'Bangers';
 }
 
 #BudgetBallers {
@@ -23,6 +24,7 @@ body{
     content: center;
     margin-top: 5px;
     font-style: italic;
+    font-family: 'Bangers';
 }
 
 .first-card {
@@ -147,5 +149,18 @@ p {
     justify-content: center;
     font-size: 20px;
     margin-right: 20px
+}
+/*added container with background image*/
+.container-full {
+    background-image: url("Assets/cashbanner.jpg");
+}
+
+
+/*added month-name styling w/google fonts*/
+#month-name {
+    color:blue;
+    font-family: 'Bangers', cursive;
+
+
 }
 
