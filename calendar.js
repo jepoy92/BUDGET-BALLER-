@@ -68,11 +68,47 @@ $('#month-generate').attr('style', 'margin: 200px;')
       newDay.append(dayText);
     }
   }
-
   
   // Event listener for calendar date click
   $("td").on("click", function (event) {
-    // Code here relating to modal and adding stuff to the calendar
+    console.log("Clicky Clack");
+    var paymentDate = $(this)[0].firstChild.textContent;
+    console.log(paymentDate);
+    // This will change the modal from hidden to display
+    // $('#calendar-modal').attr('stylye', 'display: block;');
+
+    // Submit information
+    $('#modal-button-submit').on('click', function(event){
+      event.preventDefault();
+      getModalInformation();
+    });
+
+    // Cancel modal
+    $('#modal-button-cancel').on('click', function(event){
+      event.preventDefault();
+      // This will change the modal to hidden
+      // $('#calendar-modal').attr('stylye', 'display: none;');
+      clearModal();
+    });
   });
 
+  // Get info from modal
+  function getModalInformation() {
+    var expenseName = $('#expense-name').val();
+    var expenseAmount = $('#expense-amount').val();
+    var expenseFrequency = $('#select-frequency').val();
+    var expenseCategory = $('#select-category').val();
+
+    console.log(expenseName);
+    console.log(expenseAmount);
+    console.log(expenseFrequency);
+    console.log(expenseCategory);
+    clearModal();
+  }
+
+  // Clear modal on close
+  function clearModal() {
+    $('#expense-name').val("");
+    $('#expense-amount').val("");
+  }
 });
