@@ -1,23 +1,68 @@
+
 body{
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+#nav-bar {
+    background-color: black;
 }
 
 .menu {
     float: right;
     float: center;
-    font-size: 18px
+    font-size: 24px;
+    font-style: italic;
+    justify-content: center;
+    font-family: 'Bangers';
 }
 
 #BudgetBallers {
     float: left;
     float: center;
-    font-size: 18px;
+    font-size: 24px;
     content: center;
+    margin-top: 5px;
+    font-style: italic;
 
+    font-family: 'Bangers';
 }
 
 .first-card {
     text-align: center;
+    background-color: transparent;
+    position: relative;
+    color: white;
+    margin: 0%;
+    padding-left: 0%;
+    padding-right:0%
+}
+
+.first-card h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.first-card p {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    transform: (-25%, -50%);
+}
+
+.first-card button {
+    position: absolute;
+    top: 65%;
+    left: 47%;
+}
+#background {
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    padding-left: 12%;
+    padding-right: 12%;
 }
 
 #Balance-Container {
@@ -106,3 +151,17 @@ p {
     font-size: 20px;
     margin-right: 20px
 }
+/*added container with background image*/
+.container-full {
+    background-image: url("Assets/cashbanner.jpg");
+}
+
+
+/*added month-name styling w/google fonts*/
+#month-name {
+    color:blue;
+    font-family: 'Bangers', cursive;
+
+
+}
+
