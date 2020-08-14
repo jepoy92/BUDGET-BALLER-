@@ -11,7 +11,7 @@ body{
 .menu {
     float: right;
     float: center;
-    font-size: 18px;
+    font-size: 24px;
     font-style: italic;
     justify-content: center;
     font-family: 'Bangers';
@@ -20,7 +20,7 @@ body{
 #BudgetBallers {
     float: left;
     float: center;
-    font-size: 18px;
+    font-size: 24px;
     content: center;
     margin-top: 5px;
     font-style: italic;
