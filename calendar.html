@@ -67,6 +67,43 @@
             
         </div>
     </div>
+
+    <!-- Modal Section, this will be hidden and only display when prompted through JavaScript -->
+    <div id="calendar-modal">
+        <form>
+            <h5>Enter New Reoccuring Payment</h5>
+            <!-- Expense Name -->
+            <label for="expense-name">Expense Name:</label>
+            <input id="expense-name" type="text" placeholder="Example: Phone Bill">
+
+            <!-- Expense Amount -->
+            <label for="expense-amount">Amount:</label>
+            <input id="expense-amount" type="text" placeholder="Example: $54.75">
+
+            <!-- Expense Frequency -->
+            <label for="expense-frequency">Frequency:</label>
+            <select name="frequency" id="select-frequency">
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="anually">Anually</option>
+            </select>
+
+            <!-- Expense Category -->
+            <label for="expense-category">Category:</label>
+            <select name="category" id="select-category">
+                <option value="entertainment">Entertainment</option>
+                <option value="food">Food</option>
+                <option value="travel">Travel</option>
+                <option value="home">Home</option>
+                <option value="car">Car</option>
+            </select>
+
+            <!-- Submit and Cancel buttons -->
+            <button id="modal-button-submit">Submit</button>
+            <button id="modal-button-cancel">Cancel</button>
+        </form>
+    </div>
+
     <div class="card" id="month-generate" style="text-align: center;">
     </div>
 
