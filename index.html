@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Budget Baller</title>
     <link rel="stylesheet" href="style.css">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/plugins/foundation.orbit.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation-float.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
@@ -23,6 +22,7 @@
                           <li><a href="/index.html">Home</a></li>
                           <li><a href="#">Budget</a></li>
                           <li><a href="/calendar.html">Calender</a></li>
+                          <li><a href="signin.html">Sign in</a></li>
                         </ol>
                       </nav>
                 </div>
@@ -34,14 +34,15 @@
 
     <div class="card">
             <div class="first-card">   
-                <img src="assets/background-color.jpg" alt="blue background" id="background">   
+                <!-- <img src="assets/background-color.jpg" alt="blue background" id="background">    -->
                 <h1>Welcome!</h1>
                 <p>Start building your budget now.</p>
-                <button type="button" id="Add-Button" >Click me!</button>
+                <button type="button" class="button success"> + Add expense</button>
             </div>
     </div>
     
     <div id="Body-Container">
+
 
         <div class="row">
 
@@ -54,7 +55,7 @@
                                 <img src="Assets/bank-large.png" alt="icon of a bank">
                                 Bank
                             </h1>
-                            <p id="Bank-Amount">100</p>
+                            <p>100$</p>
                         </div>
                     </div>
                 </div> 
@@ -66,7 +67,7 @@
                                 <img src="Assets/credit-card-large.png" alt="icon of a credit card">
                                 Cards
                             </h1>
-                            <p id="Card-Amount">100</p>
+                            <p>100$</p>
                         </div>
                     </div>
                 </div>
@@ -78,7 +79,7 @@
                                 <img src="Assets/cash-large.png" alt="icon of a credit card">
                                 Cash
                             </h1>
-                            <p id="Cash-Amount">100</p>
+                            <p>100$</p>
                         </div>
                     </div>
                 </div>
@@ -91,7 +92,7 @@
             <div class="card">
                 <div id="Balance-Container">
                     <span id="span-balance">Balance</span>
-                    <p id="Balance-Amount">900</p>
+                    <p id="balance">$900</p>
                 </div>
             </div>
 
@@ -124,92 +125,54 @@
                         <p>Expenses</p>
                         <ul id="Outcome-List">
 
-                            <div class="row" id="outcomes-card"> 
-                                <div class="columns small-2" id="outcomes-source" width="auto">
-                                    <div class="card">
-                                        <img src="Assets/cash.png" alt="a couple dollar bills">
-                                        [Cash]
-                                    </div>
+                            <div class="row" id="outcomes-card">
+                                <div class="card" id="table">
+                                    <table>
+                                    <thead>
+                                      <tr>
+                                        <th style="text-align:center" width="10">Date</th>
+                                        <th style="text-align:center" width="50">Place</th>
+                                        <th style="text-align:center" width="200">Name</th>
+                                        <th style="text-align:center" width="10">Amount</th>
+                                        <th style="text-align:center" width="150">Category</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td id="date">[Date]</td>
+                                        <td id="place"><img src="Assets/cash.png" alt="a couple dollar bills"></td>
+                                        <td id = "name">Uber</td>
+                                        <td id="amount">$24</td>
+                                        <td id="category">(Transportation)</td>
+                                      </tr>
+                                      <tr>
+                                        <td id="date">[Date]</td>
+                                        <td id="place"><img src="Assets/bank.png" alt="icon of a bank"></td>
+                                        <td id = "name">McDonalds</td>
+                                        <td id="amount">$10</td>
+                                        <td id="category">(Food)</td>
+                                      </tr>
+                                      <tr>
+                                        <td id="date">[Date]</td>
+                                        <td id="place"><img src="Assets/cash.png" alt="a couple dollar bills"></td>
+                                        <td id = "name">Cornhub</td>
+                                        <td id="amount">$14</td>
+                                        <td id="category">(Entertainment)</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
                                 </div>
-                                <div class="columns small-2" id="outcomes-name">
-                                    <div class="card">Gas: 50$</div>
-                                </div>
-                                <div class="columns small-8" id="outcomes-category">
-                                    <div class="card">(Transportation)</div>
-                                </div>
-
-                                <div class="columns small-2" id="outcomes-source">
-                                    <div class="card">
-                                        <img src="Assets/cash.png" alt="a couple dollar bills">
-                                        [Cash]
-                                    </div>
-                                </div>
-                                <div class="columns small-2" id="outcomes-name">
-                                    <div class="card">McDonalds: 5$</div>
-                                </div>
-                                <div class="columns small-8" id="outcomes-category">
-                                    <div class="card">(Food)</div>
-                                </div>
-
-                                <div class="columns small-2" id="outcomes-source">
-                                    <div class="card">
-                                        <img src="Assets/bank.png" alt="icon of a bank">
-                                        [Bank]
-                                    </div>
-                                </div>
-                                <div class="columns small-2" id="outcomes-name">
-                                    <div class="card">Netflix: 15$</div>
-                                </div>
-                                <div class="columns small-8" id="outcomes-category">
-                                    <div class="card">(Entertainment)</div>
-                                </div>
+                                
                             </div>
                     </div>
             
                 </div>
             </div>
         </div>
-    
+        
+
     </div>
-<<<<<<< HEAD
-
-
-
-    <div id="calendar-modal">
-        <form>
-            <h5>Enter New Reoccuring Payment</h5>
-            <!-- Expense Name -->
-            <label for="expense-name">Expense Name:</label>
-            <input id="expense-name" type="text" placeholder="Example: Phone Bill">
-            <!-- Expense Amount -->
-            <label for="expense-amount">Amount:</label>
-            <input id="expense-amount" type="text" placeholder="Example: $54.75">
-            <!-- Expense Frequency -->
-            <label for="expense-frequency">Frequency:</label>
-            <select name="frequency" id="select-frequency">
-                <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
-                <option value="anually">Anually</option>
-            </select>
-            <!-- Expense Category -->
-            <label for="expense-category">Category:</label>
-            <select name="category" id="select-category">
-                <option value="entertainment">Entertainment</option>
-                <option value="food">Food</option>
-                <option value="travel">Travel</option>
-                <option value="home">Home</option>
-                <option value="car">Car</option>
-            </select>
-            <!-- Submit and Cancel buttons -->
-            <button id="modal-button-submit">Submit</button>
-            <button id="modal-button-cancel">Cancel</button>
-        </form>
-    </div>
-
-    
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./finance.js"></script>
-
+    <script src="/calendar.js"></script>
+    <script src="/finance.js"></script>
 </body>
 </html>
