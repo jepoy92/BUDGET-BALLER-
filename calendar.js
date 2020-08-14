@@ -20,7 +20,6 @@ $('#month-generate').attr('style', 'margin: 200px;')
   }
 
     $("table").attr('style', 'text-align: center;').append(newRow);
-  }
  
   // Display weekday text
   // Array with days of the week
@@ -41,7 +40,6 @@ $('#month-generate').attr('style', 'margin: 200px;')
       .attr(
         "style",
         "border: 1px solid black; text-align: center; width: 150px;"
-        "border: 1px solid black; text-align: center; width: 100px;"
       )
       .attr("class", "")
       .appendTo("#week0");
