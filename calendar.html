@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/plugins/foundation.orbit.min.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation-float.min.css">
+    <!--google fonts link used for suggested styling-->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -21,6 +23,7 @@
                     <nav class="menu">
                         <ol>
                           <li><a href="#">Home</a></li>
+                          <li><a href="index.html">Home</a></li>
                           <li><a href="#">Budget</a></li>
                           <li><a href="#">Calender</a></li>
                         </ol>
@@ -55,3 +58,23 @@
     
 </body>
 </html>
+    <!--added container with a ballin image-->
+    <div class="container-full text-center">
+        <!--tried adding font-family to mont-name, unsuccessful.-->
+        <label id="month-name"></label>
+        <!--grid-y allows for a larger display-->
+        <div class="grid-y grid-margin-x" style="height: 100px;"></div>
+            
+            
+        </div>
+    </div>
+    <div class="card" id="month-generate" style="text-align: center;">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./calendar.js"></script>
+
+</body>
+</html>
+

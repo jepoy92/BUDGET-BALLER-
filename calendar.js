@@ -2,6 +2,13 @@ $(document).ready(function () {
   // This section builds the calendar using for loops creating a table
   var currentMonth = moment().format("MMMM YYYY");
   $("<h1>").text(currentMonth).prependTo("#calendar-area");
+$('#month-generate').attr('style', 'margin: 200px;')
+
+  var currentMonth = moment().format("MMMM");
+  $("<h1>").text(currentMonth).prependTo("#month-name");
+
+  // Create Table Elemenet for the calendar to be written to
+  $('<table>').appendTo('#month-generate');
 
   // creating table rows for each week
   for (let i = 0; i < 6; i++) {
@@ -12,6 +19,9 @@ $(document).ready(function () {
     $("table").append(newRow);
   }
 
+    $("table").attr('style', 'text-align: center;').append(newRow);
+  }
+ 
   // Display weekday text
   // Array with days of the week
   var weekDayText = [
@@ -31,6 +41,7 @@ $(document).ready(function () {
       .attr(
         "style",
         "border: 1px solid black; text-align: center; width: 150px;"
+        "border: 1px solid black; text-align: center; width: 100px;"
       )
       .attr("class", "")
       .appendTo("#week0");
@@ -50,6 +61,8 @@ $(document).ready(function () {
 
       // Creates table data element for each day of the month
       var newDay = $("<td>").attr("style", "border: 1px solid black; height: 150px; width: 150px; margin: 10px;");
+
+      var newDay = $("<td>").attr("style", "border: 1px solid black; height: 100px; width: 100px; margin: 10px;");
       $("#week" + i).append(newDay);
 
       // Write the date in each table data element
