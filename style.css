@@ -163,7 +163,8 @@ p {
 
 /*added month-name styling w/google fonts*/
 #month-name {
-    color:blue;
+    color:limegreen;
+    text-shadow: black 3px 3px 3px;
     font-family: 'Bangers', cursive;
 }
 
