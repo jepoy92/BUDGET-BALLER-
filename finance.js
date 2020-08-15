@@ -1,6 +1,4 @@
 
-
-
 const user = {
     firstName: "John",
     lastName: "Smith",
@@ -43,7 +41,6 @@ function loadBankInfo(){
         success: function (Customer) {
             console.log(Customer);
             BankBalance.textContent = Customer.balance ;
-            BankProgress.
             console.log("Customer Bank Balance:  " + Customer.balance);
 
         }
@@ -137,10 +134,6 @@ function loadExpenses() {
         var StoragedExpenses = JSON.parse(localStorage.getItem("Storaged-Expenses"));
         console.log(StoragedExpenses);
         
-        
-        
-
-        
         StoragedExpenses.forEach(element => {
 
             var ExpenseList = document.getElementById("Expenses-List");
@@ -229,7 +222,6 @@ function SetExpense(expense){
 
 
 
-
 }
 
 function clearModal(){
@@ -266,6 +258,8 @@ loadExpenses();
 $("#Add-Button").click( function(event){
     console.log("Button Clicked");
 
+    $("#modal").toggleClass("modal-display");
+
 
     
 
@@ -290,7 +284,7 @@ class Expense {
     };
   
     
-  }
+}
 
 
 $("#modal-button-submit").click( function(event){
@@ -324,6 +318,6 @@ $("#modal-button-submit").click( function(event){
 });
 
 $("#modal-button-cancel").click( function(event){
-    
+    $("#modal").addClass("modal-display");
 
 });

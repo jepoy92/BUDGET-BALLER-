@@ -156,8 +156,9 @@ p {
 
 
 /*added container with background image*/
-.container-full {
+.grid-container-full {
     background-image: url("Assets/cashbanner.jpg");
+    
 }
 
 
@@ -244,4 +245,8 @@ progress[value] {
     border-color: black;
     border-width: thick;
     }
+    
+#table-body {
+    background-color: lightcyan;
+}
 
