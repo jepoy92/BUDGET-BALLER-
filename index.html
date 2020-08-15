@@ -55,7 +55,7 @@
                                 <img src="Assets/bank-large.png" alt="icon of a bank">
                                 Bank
                             </h1>
-                            <p id="Bank-Amount">100</p>
+                            <p id="Bank-Amount">0</p>
                         </div>
                     </div>
                 </div> 
@@ -67,7 +67,7 @@
                                 <img src="Assets/credit-card-large.png" alt="icon of a credit card">
                                 Cards
                             </h1>
-                            <p id="Card-Amount">100</p>
+                            <p id="Card-Amount">0</p>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                                 <img src="Assets/cash-large.png" alt="icon of a credit card">
                                 Cash
                             </h1>
-                            <p id="Cash-Amount">100</p>
+                            <p id="Cash-Amount">0</p>
                         </div>
                     </div>
                 </div>
@@ -149,22 +149,22 @@
                                         <td id="date">[Date]</td>
                                         <td id="place"><img src="Assets/cash.png" alt="a couple dollar bills"></td>
                                         <td id = "name">Uber</td>
-                                        <td id="amount"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">$24</td>
-                                        <td id="category">(Transportation)</td>
+                                        <td id="amount"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">24</td>
+                                        <td id="category">Travel</td>
                                       </tr>
                                       <tr>
                                         <td id="date">[Date]</td>
                                         <td id="place"><img src="Assets/bank.png" alt="icon of a bank"></td>
                                         <td id = "name">McDonalds</td>
-                                        <td id="amount"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">$10</td>
-                                        <td id="category">(Food)</td>
+                                        <td id="amount"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">10</td>
+                                        <td id="category">Food</td>
                                       </tr>
                                       <tr>
                                         <td id="date">[Date]</td>
                                         <td id="place"><img src="Assets/credit-card.png" alt="icon of a credit card"></td>
                                         <td id = "name">Cornhub</td>
-                                        <td id="amount"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">$14</td>
-                                        <td id="category">(Entertainment)</td>
+                                        <td id="amount"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">14</td>
+                                        <td id="category">Entertainment</td>
                                       </tr>
                                     </tbody>
                                 </table>
@@ -177,7 +177,6 @@
         </div>
 
     </div>
-
 
     <div id="calendar-modal">
         <form>
@@ -219,46 +218,11 @@
             <button type = "button" id="modal-button-cancel">Cancel</button>
         </form>
 
-    <div id="modal">
-        <div id="modal-content">
-            <div id="calendar-modal">
-                <form>
-                    <h5>Enter New Reoccuring Payment</h5>
-                    <!-- Expense Name -->
-                    <label for="expense-name">Expense Name:</label>
-                    <input id="expense-name" type="text" placeholder="Example: Phone Bill">
-                    <!-- Expense Amount -->
-                    <label for="expense-amount">Amount:</label>
-                    <input id="expense-amount" type="text" placeholder="Example: $54.75">
-                    <!-- Expense Frequency -->
-                    <label for="expense-frequency">Frequency:</label>
-                    <select name="frequency" id="select-frequency">
-                        <option value="once">Once</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="monthly">Monthly</option>
-                        <option value="anually">Anually</option>
-                    </select>
-                    <!-- Expense Category -->
-                    <label for="expense-category">Category:</label>
-                    <select name="category" id="select-category">
-                        <option value="food">Food</option>
-                        <option value="travel">Travel</option>
-                        <option value="home">Home</option>
-                        <option value="car">Car</option>
-                        <option value="bill">Bill</option>
-                        <option value="entertainment">Entertainment</option>
-                    </select>
-                    <!-- Submit and Cancel buttons -->
-                    <button type = "button" id="modal-button-submit">Submit</button>
-                    <button type = "button" id="modal-button-cancel">Cancel</button>
-                </form>
-        
-            </div>
-        </div>
-    </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="finance.js"></script>
+    <source src="src/assets/scss/_settings.scss">
 </body>
 </html>
