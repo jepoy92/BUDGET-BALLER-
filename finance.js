@@ -1,5 +1,7 @@
 
-var user = {
+
+
+const user = {
     firstName: "John",
     lastName: "Smith",
     moneyLocation : ["Bank","Card","Cash"],
@@ -8,19 +10,8 @@ var user = {
 
 };
 
-var expense = {
-    date : "",
-    place : "",
-    name : "",
-    amount : 0,
-    category : "",
 
-    desciption : "",
-    frecuency : ""
-
-};
-
-var income ={
+const income ={
     date : "",
     place : "",
     name : "",
@@ -31,7 +22,7 @@ var income ={
 
 };
 
-var categories ={
+const categories ={
     entertainment : "",
     food : "",
     travel :"",
@@ -155,11 +146,53 @@ loadExpenses();
 
 
 
+
 $("#Add-Button").click( function(event){
     console.log("Button Clicked");
 
     
 
 
+
+});
+
+
+
+class Expense {
+    constructor(date, place, name, amount,  category ,frecuency) {
+        this.date = date;
+        this.place = place;
+        this.name = name;
+        this.amount = amount;
+        this.category = category;
+        this.frecuency = frecuency; 
+    }
+  
+    info() {
+      console.log(this);
+    };
+  
+    
+  }
+
+
+$("#modal-button-submit").click( function(event){
+    //var ExpenseDate = moment().format("MM/DD/YYYY");
+    var ExpenseName  = $("#expense-name").val();
+    var ExpenseAmount= $("#expense-amount").val();
+    var ExpenseFrecuency = $("#select-frequency").val();
+    var ExpenseCategory = $("#select-category").val();
+    
+    const newExpense = new Expense("10/22/92","Place" ,ExpenseName,ExpenseAmount,ExpenseCategory,ExpenseFrecuency);
+    
+    console.log(newExpense);
+
+    
+
+
+});
+
+$("#modal-button-cancel").click( function(event){
+    
 
 });
