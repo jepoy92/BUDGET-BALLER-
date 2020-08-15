@@ -118,6 +118,11 @@ $(document).ready(function () {
   }
 });
 
-var SavedPayments  = {
-
-}
+// var savedCalendar = {
+//   savedMonth = {
+//     savedDay = {
+//       savedName = "",
+//       savedAmount = ""
+//     }
+//   }
+// }
