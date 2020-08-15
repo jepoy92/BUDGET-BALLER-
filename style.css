@@ -199,6 +199,16 @@ p {
     border-radius: 10px;
 }
 
+progress[value] {
+    height: 50px;
+    width: 1000px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    float: center;
+}
+
 #modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
