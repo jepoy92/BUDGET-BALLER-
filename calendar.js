@@ -12,10 +12,7 @@ $('#month-generate').attr('style', 'margin: 200px;')
 
   // creating table rows for each week
   for (let i = 0; i < 6; i++) {
-    var newRow = $("<tr>")
-      .attr("id", "week" + i)
-      .attr("class", "container")
-      .attr("style", "");
+    var newRow = $("<tr>").attr("id", "week" + i).attr("class", "container").attr("style", "");
     $("table").append(newRow);
   }
 
@@ -32,17 +29,11 @@ $('#month-generate').attr('style', 'margin: 200px;')
     "Friday",
     "Saturday",
   ];
+  
   // Creating table header elements to hold the weekday text
   for (let i = 0; i < weekDayText.length; i++) {
     var weekDay = weekDayText[i];
-    $("<th>")
-      .text(weekDay)
-      .attr(
-        "style",
-        "border: 1px solid black; text-align: center; width: 150px;"
-      )
-      .attr("class", "")
-      .appendTo("#week0");
+    $("<th>").text(weekDay).attr("style","border: 1px solid black; text-align: center; width: 150px;").appendTo("#week0");
   }
 
   // creating the days
@@ -51,16 +42,16 @@ $('#month-generate').attr('style', 'margin: 200px;')
 
   for (let i = 1; i < weekDayText.length; i++) {
     var weekDay = weekDayText[i];
-    console.log(currentDay);
+    // console.log(currentDay);
     for (let j = 0; j < weekDayText.length; j++) {
       dayCount++;
       // Gets the current date and adds one for each iteration
       var currentDay = moment().date(dayCount + 1).format("D");
 
       // Creates table data element for each day of the month
-      var newDay = $("<td>").attr("style", "border: 1px solid black; height: 150px; width: 150px; margin: 10px;");
+      // var newDay = $("<td>").attr("style", "border: 1px solid black; height: 150px; width: 150px; margin: 10px;");
 
-      var newDay = $("<td>").attr("style", "border: 1px solid black; height: 100px; width: 100px; margin: 10px;");
+      var newDay = $("<td>").attr("style", "border: 1px solid black; height: 100px; width: 100px; margin: 10px; text-align: center;");
       $("#week" + i).append(newDay);
 
       // Write the date in each table data element
@@ -68,11 +59,57 @@ $('#month-generate').attr('style', 'margin: 200px;')
       newDay.append(dayText);
     }
   }
-
   
   // Event listener for calendar date click
   $("td").on("click", function (event) {
-    // Code here relating to modal and adding stuff to the calendar
+    console.log("Clicky Clack");
+    var paymentDate = $(this)[0].firstChild.textContent;
+    var selectedDay = $(this).innerHTML;
+
+    console.log(paymentDate);
+
+    // This will change the modal from hidden to display
+    // $('#calendar-modal').attr('stylye', 'display: block;');
+
+    // Submit information
+    $('#modal-button-submit').on('click', function(event){
+      event.preventDefault();
+      getModalInformation();
+      clearModal();
+    });
+
+    // Cancel modal
+    $('#modal-button-cancel').on('click', function(event){
+      event.preventDefault();
+      clearModal();
+    });
   });
 
+  // Get info from modal
+  function getModalInformation() {
+    var expenseName = $('#expense-name').val();
+    var expenseAmount = $('#expense-amount').val();
+    var expenseFrequency = $('#select-frequency').val();
+    var expenseCategory = $('#select-category').val();
+
+    // Just a whole bunch of sanity checks
+    console.log(expenseName);
+    console.log(expenseAmount);
+    console.log(expenseFrequency);
+    console.log(expenseCategory);
+
+    // This is supposed to write the info to the date <td> tag but it is not working...
+    selectedDay = expenseName + expenseAmount;
+    console.log(selectedDay);
+
+    clearModal();
+  }
+
+  // Clear modal on close
+  function clearModal() {
+    // This will change the modal to hidden
+    // $('#calendar-modal').attr('stylye', 'display: none;');
+    $('#expense-name').val("");
+    $('#expense-amount').val("");
+  }
 });

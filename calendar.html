@@ -10,107 +10,98 @@
     <!--google fonts link used for suggested styling-->
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
-<body>
-
-    <div class="row">
-
-        <div class="card" id="nav-bar">
-            <div class="card-section">
-                <div class="column">
-                </div>
-                <div class="column">
-                    <span class="label" id="BudgetBallers">Budget Baller$</span>
-                    <nav class="menu">
-                        <ol>
-                            <li><a href="/index.html">Home</a></li>
-                            <li><a href="#">Budget</a></li>
-                            <li><a href="/calendar.html">Calender</a></li>
-                        </ol>
-                      </nav>
+    <body>
+        
+        <div class="row">
+            <div class="card" id="nav-bar">
+                <div class="card-section">
+                    <div class="column">
+                    </div>
+                    <div class="column">
+                        <span class="label" id="BudgetBallers">Budget Baller$</span>
+                        <nav class="menu">
+                            <ol>
+                                <li><a href="/index.html">Home</a></li>
+                                <li><a href="#">Budget</a></li>
+                                <li><a href="/calendar.html">Calender</a></li>
+                            </ol>
+                        </nav>
+                    </div>
                 </div>
             </div>
         </div>
 
-        
-    </div>
-
-    <div class="card">
-        <div class="row">
+        <div class="card">
+            <div class="row">
+                <!--added container with a ballin image-->
+        <div class="container-full text-center">
+            <!--tried adding font-family to mont-name, unsuccessful.-->
+            <label id="month-name"></label>
+            <!--grid-y allows for a larger display-->
+            <div class="grid-y grid-margin-x" style="height: 100px;"></div>
+            </div>
             <div class="card-title">
                 <div class="columns medium-4"> 
-                    <button id="previous-month">Previous</button>
+                    <button type="button" class="button" id="previous-month">Previous</button>
                 </div>
                 <div class="columns medium-4">
-                    <label id="month-name">August</label>
+                    <label id="month-name"></label>
                 </div>
                 <div class="columns medium-4">
-                    <button id="next-month">Next</button>
+                    <button type="button" class="button" id="next-month">Next</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="card" id="month-generate" style="text-align: center;">
-        <h1>August</h1>
-    </div>
-    
-    
-</body>
-</html>
-    <!--added container with a ballin image-->
-    <div class="container-full text-center">
-        <!--tried adding font-family to mont-name, unsuccessful.-->
-        <label id="month-name"></label>
-        <!--grid-y allows for a larger display-->
-        <div class="grid-y grid-margin-x" style="height: 100px;"></div>
-            
-            
         </div>
-    </div>
+            
+    
+        <!--added foundation modal to html-->
 
-    <!-- Modal Section, this will be hidden and only display when prompted through JavaScript -->
-    <div id="calendar-modal">
-        <form>
-            <h5>Enter New Reoccuring Payment</h5>
-            <!-- Expense Name -->
-            <label for="expense-name">Expense Name:</label>
-            <input id="expense-name" type="text" placeholder="Example: Phone Bill">
+        <!-- Modal Section, this will be hidden and only display when prompted through JavaScript -->
+        <p><button type="button" class="button" data-open="calendar-modal">Start Ballin</button></p>
+        <div class="reveal" id="calendar-modal" data-reveal>
+            <form>
+                <h5>Enter New Reoccuring Payment</h5>
+                <!-- Expense Name -->
+                <label for="expense-name">Expense Name:</label>
+                <input id="expense-name" type="text" placeholder="Example: Phone Bill">
 
-            <!-- Expense Amount -->
-            <label for="expense-amount">Amount:</label>
-            <input id="expense-amount" type="text" placeholder="Example: $54.75">
+                <!-- Expense Amount -->
+                <label for="expense-amount">Amount:</label>
+                <input id="expense-amount" type="text" placeholder="Example: $54.75">
 
-            <!-- Expense Frequency -->
-            <label for="expense-frequency">Frequency:</label>
-            <select name="frequency" id="select-frequency">
-                <option value="weekly">Weekly</option>
-                <option value="monthly">Monthly</option>
-                <option value="anually">Anually</option>
-            </select>
+                <!-- Expense Frequency -->
+                <label for="expense-frequency">Frequency:</label>
+                <select name="frequency" id="select-frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="anually">Anually</option>
+                </select>
 
-            <!-- Expense Category -->
-            <label for="expense-category">Category:</label>
-            <select name="category" id="select-category">
-                <option value="entertainment">Entertainment</option>
-                <option value="food">Food</option>
-                <option value="travel">Travel</option>
-                <option value="home">Home</option>
-                <option value="car">Car</option>
-            </select>
+                <!-- Expense Category -->
+                <label for="expense-category">Category:</label>
+                <select name="category" id="select-category">
+                    <option value="entertainment">Entertainment</option>
+                    <option value="food">Food</option>
+                    <option value="travel">Travel</option>
+                    <option value="home">Home</option>
+                    <option value="car">Car</option>
+                </select>
 
-            <!-- Submit and Cancel buttons -->
-            <button id="modal-button-submit">Submit</button>
-            <button id="modal-button-cancel">Cancel</button>
-        </form>
-    </div>
+                <!-- Submit and Cancel buttons -->
+                <button id="modal-button-submit" type="button">Submit</button>
+                <button id="modal-button-cancel" type="button">Cancel</button>
+            </form>
+        </div>
+        <button class="close-button" data-close aria-label="close-modal" type="button"><span aria-hidden="true">&times;</span></button>
 
-    <div class="card" id="month-generate" style="text-align: center;">
-    </div>
+        <div class="card" id="month-generate" style="text-align: center;"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./calendar.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="./calendar.js"></script>
 
-</body>
+    </body>
 </html>
 
