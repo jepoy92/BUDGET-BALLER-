@@ -171,8 +171,6 @@
         </div>
     
     </div>
-<<<<<<< HEAD
-
 
 
     <div id="calendar-modal">
@@ -187,6 +185,7 @@
             <!-- Expense Frequency -->
             <label for="expense-frequency">Frequency:</label>
             <select name="frequency" id="select-frequency">
+                <option value="once">Once</option>
                 <option value="weekly">Weekly</option>
                 <option value="monthly">Monthly</option>
                 <option value="anually">Anually</option>
@@ -194,15 +193,16 @@
             <!-- Expense Category -->
             <label for="expense-category">Category:</label>
             <select name="category" id="select-category">
-                <option value="entertainment">Entertainment</option>
                 <option value="food">Food</option>
                 <option value="travel">Travel</option>
                 <option value="home">Home</option>
                 <option value="car">Car</option>
+                <option value="bill">Bill</option>
+                <option value="entertainment">Entertainment</option>
             </select>
             <!-- Submit and Cancel buttons -->
-            <button id="modal-button-submit">Submit</button>
-            <button id="modal-button-cancel">Cancel</button>
+            <button type = "button" id="modal-button-submit">Submit</button>
+            <button type = "button" id="modal-button-cancel">Cancel</button>
         </form>
     </div>
 
