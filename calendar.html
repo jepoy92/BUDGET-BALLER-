@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 </head>
     <body>
-
+        
         <div class="row">
             <div class="card" id="nav-bar">
                 <div class="card-section">
@@ -33,31 +33,34 @@
 
         <div class="card">
             <div class="row">
-                <div class="card-title">
-                    <div class="columns medium-4"> 
-                        <button id="previous-month">Previous</button>
-                    </div>
-                    <div class="columns medium-4">
-                        <label id="month-name"></label>
-                    </div>
-                    <div class="columns medium-4">
-                        <button id="next-month">Next</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!--added container with a ballin image-->
+                <!--added container with a ballin image-->
         <div class="container-full text-center">
             <!--tried adding font-family to mont-name, unsuccessful.-->
             <label id="month-name"></label>
             <!--grid-y allows for a larger display-->
             <div class="grid-y grid-margin-x" style="height: 100px;"></div>
             </div>
+            <div class="card-title">
+                <div class="columns medium-4"> 
+                    <button type="button" class="button" id="previous-month">Previous</button>
+                </div>
+                <div class="columns medium-4">
+                    <label id="month-name"></label>
+                </div>
+                <div class="columns medium-4">
+                    <button type="button" class="button" id="next-month">Next</button>
+                </div>
+            </div>
         </div>
+    </div>
+        </div>
+            
+    
+        <!--added foundation modal to html-->
 
         <!-- Modal Section, this will be hidden and only display when prompted through JavaScript -->
-        <div id="calendar-modal">
+        <p><button type="button" class="button" data-open="calendar-modal">Start Ballin</button></p>
+        <div class="reveal" id="calendar-modal" data-reveal>
             <form>
                 <h5>Enter New Reoccuring Payment</h5>
                 <!-- Expense Name -->
@@ -91,6 +94,7 @@
                 <button id="modal-button-cancel" type="button">Cancel</button>
             </form>
         </div>
+        <button class="close-button" data-close aria-label="close-modal" type="button"><span aria-hidden="true">&times;</span></button>
 
         <div class="card" id="month-generate" style="text-align: center;"></div>
 
