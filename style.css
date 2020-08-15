@@ -199,8 +199,11 @@ p {
     border-radius: 10px;
 }
 
-#modal {
+.modal-display {
     display: none; /* Hidden by default */
+}
+
+#modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
