@@ -12,6 +12,11 @@ This project was made in collaboration with:
 @AldoCarrillo
 @JonesElliott
 
+### Calendar
+The calendar was built using Kim Heidorn's calendar as a guide through her explanation on dev.to
+
+[Kim Heidorn Calendar Walkthrough](https://dev.to/knheidorn/making-a-calendar-in-vanilla-javascript-48j8)
+
 ## License
 MIT License
 

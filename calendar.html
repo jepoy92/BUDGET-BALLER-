@@ -92,7 +92,27 @@
             </form>
         </div>
 
-        <div class="card" id="month-generate" style="text-align: center;"></div>
+        <!-- Calendar is built here -->
+        <div class="card" id="month-generate" style="text-align: center;">
+            <table>
+                <caption>
+                    <span id="month"></span>
+                    <span id="year"></span>
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Sunday</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>Saturday</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

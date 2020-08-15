@@ -1,64 +1,49 @@
 $(document).ready(function () {
   // This section builds the calendar using for loops creating a table
-  var currentMonth = moment().format("MMMM YYYY");
-  $("<h1>").text(currentMonth).prependTo("#calendar-area");
-$('#month-generate').attr('style', 'margin: 200px;')
 
-  var currentMonth = moment().format("MMMM");
-  $("<h1>").text(currentMonth).prependTo("#month-name");
+  // Set current year and month to variables
+  var currentYear = new Date().getFullYear();
+  var currentMonth = new Date().getMonth();
 
-  // Create Table Elemenet for the calendar to be written to
-  $('<table>').appendTo('#month-generate');
+  // Function to build the calendar
+  function renderCalendar(year, month) {
+      let startOfMonth = new Date(year, month).getDay();
+      let numOfDays = 32 - new Date(year, month, 32).getDate();
+      let renderNum = 1;
 
-  // creating table rows for each week
-  for (let i = 0; i < 6; i++) {
-    var newRow = $("<tr>").attr("id", "week" + i).attr("class", "container").attr("style", "");
-    $("table").append(newRow);
+      let tableBody = document.getElementById('table-body');
+      let renderMonth = document.getElementById('month');
+      let renderYear = document.getElementById('year');
+
+      const today = new Date(currentYear, currentMonth);
+      const monthString = today.toLocaleString('default', { month: 'long'});
+
+      renderMonth.textContent = monthString;
+      renderYear.textContent = year;
+
+      for (i = 0; i < 6; i++) {
+          let row = document.createElement('tr');
+          for (j = 0; j < 7; j++) {
+              if (i === 0 && j < startOfMonth) {
+                  let td = document.createElement('td');
+                  td.classList.add('empty');
+                  row.append(td);
+              } else if (renderNum > numOfDays) {
+                  break;
+              } else {
+                  let td = document.createElement('td');
+                  td.textContent = renderNum;
+                  row.append(td);
+                  renderNum++;
+              }
+          }
+          tableBody.append(row);
+      }
   }
 
-    $("table").attr('style', 'text-align: center;').append(newRow);
- 
-  // Display weekday text
-  // Array with days of the week
-  var weekDayText = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  
-  // Creating table header elements to hold the weekday text
-  for (let i = 0; i < weekDayText.length; i++) {
-    var weekDay = weekDayText[i];
-    $("<th>").text(weekDay).attr("style","border: 1px solid black; text-align: center; width: 150px;").appendTo("#week0");
-  }
+  // Call function to build calendar based on given month and year
+  renderCalendar(currentYear, currentMonth);
 
-  // creating the days
-  //Variable to assist with counting days in the calendar
-  var dayCount = 0;
-
-  for (let i = 1; i < weekDayText.length; i++) {
-    var weekDay = weekDayText[i];
-    // console.log(currentDay);
-    for (let j = 0; j < weekDayText.length; j++) {
-      dayCount++;
-      // Gets the current date and adds one for each iteration
-      var currentDay = moment().date(dayCount + 1).format("D");
-
-      // Creates table data element for each day of the month
-      // var newDay = $("<td>").attr("style", "border: 1px solid black; height: 150px; width: 150px; margin: 10px;");
-
-      var newDay = $("<td>").attr("style", "border: 1px solid black; height: 100px; width: 100px; margin: 10px; text-align: center;");
-      $("#week" + i).append(newDay);
-
-      // Write the date in each table data element
-      var dayText = $("<p>").text(currentDay).attr("class", "float-left").attr("style"," margin-bottom: 150px; border: 1px solid black; width: 30px; height: 30px;");
-      newDay.append(dayText);
-    }
-  }
   
   // Event listener for calendar date click
   $("td").on("click", function (event) {
