@@ -1,6 +1,14 @@
 $(document).ready(function () {
-  // This section builds the calendar using for loops creating a table
 
+  var savedCalendar = {
+    savedPayment: [{
+      date: "",
+      name: "",
+      amount: ""
+    }]
+  }
+
+  // This section builds the calendar using for loops creating a table
   // Set current year and month to variables
   var currentYear = new Date().getFullYear();
   var currentMonth = new Date().getMonth();
@@ -44,14 +52,14 @@ $(document).ready(function () {
 
   // Call function to build calendar based on given month and year
   renderCalendar(currentYear, currentMonth);
-  // 
+  // Button functionality to go to previous month
   $('#previous-month').on('click', function(){
     currentMonth--;
     clearCalendar();
     console.log(currentMonth);
     renderCalendar(currentYear, currentMonth);
   });
-
+  // Button functionality to go to next month
   $('#next-month').on('click', function(){
     currentMonth++;
     clearCalendar();
@@ -59,6 +67,7 @@ $(document).ready(function () {
     renderCalendar(currentYear, currentMonth);
   });
 
+  // Clear the calendar
   function clearCalendar() {
     $('#table-body').html("");
   }
@@ -89,7 +98,7 @@ $(document).ready(function () {
   });
 
   // Get info from modal
-  function getModalInformation(selectedDay) {
+  function getModalInformation(selectedDay, paymentDate) {
     var expenseName = $('#expense-name').val();
     var expenseAmount = $('#expense-amount').val();
     var expenseFrequency = $('#select-frequency').val();
@@ -115,14 +124,7 @@ $(document).ready(function () {
     $('#modal').addClass('modal-display');
     $('#expense-name').val("");
     $('#expense-amount').val("");
+    $('#select-frequency').val("weekly");
+    $('#select-category').val("entertainment");
   }
 });
-
-// var savedCalendar = {
-//   savedMonth = {
-//     savedDay = {
-//       savedName = "",
-//       savedAmount = ""
-//     }
-//   }
-// }
