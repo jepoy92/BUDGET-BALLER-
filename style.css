@@ -156,8 +156,9 @@ p {
 
 
 /*added container with background image*/
-.container-full {
+.grid-container-full {
     background-image: url("Assets/cashbanner.jpg");
+    
 }
 
 
@@ -229,7 +230,7 @@ progress[value] {
 }
 #modal-content {
     font-family: 'Bangers';
-    text-shadow: white .5px .5px;
+    text-shadow: white .5px .5px .5px;
     margin: auto;
     width: 50%;
     background-color:cadetblue;
@@ -244,6 +245,10 @@ progress[value] {
     border-color: black;
     border-width: thick;
     }
+    
+#table-body {
+    background-color: lightcyan;
+}
 
 td {
     border: 1px solid black;
