@@ -199,7 +199,6 @@ p {
     border-radius: 10px;
 }
 
-<<<<<<< HEAD
 progress[value] {
     height: 50px;
     width: 1000px;
@@ -210,10 +209,7 @@ progress[value] {
     float: center;
 }
 
-#modal {
-=======
 .modal-display {
->>>>>>> 8445d030b5061e28ed277957816e2b0767d1f79d
     display: none; /* Hidden by default */
 }
 
@@ -230,9 +226,11 @@ progress[value] {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 #modal-content {
+    font-family: 'Bangers';
+    text-shadow: white .5px .5px;
     margin: auto;
     width: 50%;
-    background-color:lightblue;
+    background-color:cadetblue;
     border: 3px solid black;
     border-radius: 25px;
     padding: 20px;
@@ -240,3 +238,8 @@ progress[value] {
     width: 600px;
     height: 420px;
 }
+#month-generate {
+    border-color: black;
+    border-width: thick;
+    }
+
