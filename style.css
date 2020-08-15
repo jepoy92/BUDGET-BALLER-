@@ -165,7 +165,16 @@ p {
 #month-name {
     color:blue;
     font-family: 'Bangers', cursive;
+}
 
-
+.button {
+    font-family: 'Bangers';
+}
+/*added background color to html*/
+.background,
+.columns,
+.row,
+.card {
+    background-color: cadetblue;
 }
 
