@@ -199,6 +199,7 @@ p {
     border-radius: 10px;
 }
 
+<<<<<<< HEAD
 progress[value] {
     height: 50px;
     width: 1000px;
@@ -210,7 +211,13 @@ progress[value] {
 }
 
 #modal {
+=======
+.modal-display {
+>>>>>>> 8445d030b5061e28ed277957816e2b0767d1f79d
     display: none; /* Hidden by default */
+}
+
+#modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
