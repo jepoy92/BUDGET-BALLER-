@@ -43,6 +43,24 @@ $(document).ready(function () {
 
   // Call function to build calendar based on given month and year
   renderCalendar(currentYear, currentMonth);
+
+  $('#previous-month').on('click', function(){
+    currentMonth--;
+    clearCalendar();
+    console.log(currentMonth);
+    renderCalendar(currentYear, currentMonth);
+  });
+
+  $('#next-month').on('click', function(){
+    currentMonth++;
+    clearCalendar();
+    console.log(currentMonth);
+    renderCalendar(currentYear, currentMonth);
+  });
+
+  function clearCalendar() {
+    $('#table-body').html("");
+  }
   
   // Event listener for calendar date click
   $("td").on("click", function (event) {
