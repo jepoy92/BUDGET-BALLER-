@@ -32,6 +32,7 @@ $(document).ready(function () {
                   break;
               } else {
                   let td = document.createElement('td');
+                  td.setAttribute('id', renderNum);
                   td.textContent = renderNum;
                   row.append(td);
                   renderNum++;
@@ -43,7 +44,7 @@ $(document).ready(function () {
 
   // Call function to build calendar based on given month and year
   renderCalendar(currentYear, currentMonth);
-
+  // 
   $('#previous-month').on('click', function(){
     currentMonth--;
     clearCalendar();
@@ -71,7 +72,7 @@ $(document).ready(function () {
     console.log(paymentDate);
 
     // This will change the modal from hidden to display
-    // $('#calendar-modal').attr('stylye', 'display: block;');
+    $('#modal').toggleClass('modal-display');
 
     // Submit information
     $('#modal-button-submit').on('click', function(event){
@@ -111,8 +112,17 @@ $(document).ready(function () {
   // Clear modal on close
   function clearModal() {
     // This will change the modal to hidden
-    // $('#calendar-modal').attr('style', 'display: none;');
+    $('#modal').addClass('modal-display');
     $('#expense-name').val("");
     $('#expense-amount').val("");
   }
 });
+
+// var savedCalendar = {
+//   savedMonth = {
+//     savedDay = {
+//       savedName = "",
+//       savedAmount = ""
+//     }
+//   }
+// }

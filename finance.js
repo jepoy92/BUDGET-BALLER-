@@ -43,6 +43,7 @@ function loadBankInfo(){
         success: function (Customer) {
             console.log(Customer);
             BankBalance.textContent = Customer.balance ;
+            BankProgress.
             console.log("Customer Bank Balance:  " + Customer.balance);
 
         }
