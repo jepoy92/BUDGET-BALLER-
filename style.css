@@ -245,3 +245,6 @@ progress[value] {
     border-width: thick;
     }
 
+td {
+    border: 1px solid black;
+}
