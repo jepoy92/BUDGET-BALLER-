@@ -144,7 +144,7 @@
                                         <th style="text-align:center" width="150">Category</th>
                                       </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="Expenses-List">
                                       <tr>
                                         <td id="date">[Date]</td>
                                         <td id="place"><img src="Assets/cash.png" alt="a couple dollar bills"></td>
@@ -188,6 +188,14 @@
             <!-- Expense Amount -->
             <label for="expense-amount">Amount:</label>
             <input id="expense-amount" type="text" placeholder="Example: $54.75">
+
+            <p>Select Payment:</p>
+            <input type="radio" id="bank-radio" name="gender" value="male">
+            <label for="bank">Bank</label>
+            <input type="radio" id="card-radio" name="gender" value="male">
+            <label for="card">Card</label>
+            <input type="radio" id="cash-radio" name="gender" value="male">
+            <label for="cash">Cash</label><br>
             <!-- Expense Frequency -->
             <label for="expense-frequency">Frequency:</label>
             <select name="frequency" id="select-frequency">

@@ -43,6 +43,7 @@ function loadBankInfo(){
         success: function (Customer) {
             console.log(Customer);
             BankBalance.textContent = Customer.balance ;
+            console.log("Customer Bank Balance:  " + Customer.balance);
 
         }
     });
@@ -58,8 +59,9 @@ function loadCardInfo(){
         type: 'GET',
         dataType: 'json',
         success: function (Customer) {
-            //CardBalance.textContent = Customer.card;
-            CardBalance.textContent = "300";
+            CardBalance.textContent = Customer.card;
+            
+            console.log("Customer Card Balance:  " + Customer.card);
 
         }
     });
@@ -126,7 +128,72 @@ function loadIncomes(){
 }
 
 function loadExpenses() {
+
+
+    if(JSON.parse(localStorage.getItem("Storaged-Expenses"))){
+        var StoragedExpenses = JSON.parse(localStorage.getItem("Storaged-Expenses"));
+        console.log(StoragedExpenses);
+        
+        
+        var ExpenseList = document.getElementById("Expenses-List");
+        var ExpenseElement = document.createElement("tr");
+
+        var ExpenseDate = document.createElement("td");
+        ExpenseDate.setAttribute("id","date");
+
+        var ExpensePlace = document.createElement("td");
+        ExpensePlace.setAttribute("id","place");
+
+        var ExpenseName = document.createElement("td");
+        ExpenseName.setAttribute("id","name");
+
+        var ExpenseAmount = document.createElement("td");
+        ExpenseAmount.setAttribute("id","amount");
+
+        var ExpenseCategory = document.createElement("td");
+        ExpenseCategory.setAttribute("id","category");
+
+        
+        StoragedExpenses.forEach(element => {
+            ExpenseDate.textContent = element.date;
+            ExpensePlace.textContent = element.place;
+            ExpenseName.textContent = element.name;
+            ExpenseAmount.textContent = element.amount;
+            ExpenseCategory.textContent = element.category;
+            
+        });
+
+        ExpenseElement.appendChild(ExpenseDate);
+        ExpenseElement.appendChild(ExpensePlace);
+        ExpenseElement.appendChild(ExpenseName);
+        ExpenseElement.appendChild(ExpenseAmount);
+        ExpenseElement.appendChild(ExpenseCategory);
+
+        ExpenseList.prepend(ExpenseElement);
+                   
+    }
+        
+    else
+        console.log("not storaged");
     
+}
+
+function SetExpense(expense){
+
+    if(JSON.parse(localStorage.getItem("Storaged-Expenses")))
+        var ExpensesList = JSON.parse(localStorage.getItem("Storaged-Expenses"));
+    else
+        var ExpensesList = [];
+
+  
+    ExpensesList.push(expense);
+    localStorage.setItem("Storaged-Expenses", JSON.stringify(ExpensesList));
+
+    loadExpenses();
+
+
+
+
 }
 
 
@@ -149,6 +216,7 @@ loadExpenses();
 
 $("#Add-Button").click( function(event){
     console.log("Button Clicked");
+
 
     
 
@@ -177,15 +245,30 @@ class Expense {
 
 
 $("#modal-button-submit").click( function(event){
-    //var ExpenseDate = moment().format("MM/DD/YYYY");
+    var ExpenseDate = moment().format("MM/DD/YYYY");
     var ExpenseName  = $("#expense-name").val();
     var ExpenseAmount= $("#expense-amount").val();
     var ExpenseFrecuency = $("#select-frequency").val();
     var ExpenseCategory = $("#select-category").val();
     
-    const newExpense = new Expense("10/22/92","Place" ,ExpenseName,ExpenseAmount,ExpenseCategory,ExpenseFrecuency);
+    var ExpensePlace= "";
+    if(document.getElementById("bank-radio").checked == true)
+        ExpensePlace = "bank";
+    if(document.getElementById("card-radio").checked == true)
+        ExpensePlace = "card";
+    if(document.getElementById("cash-radio").checked == true)
+        ExpensePlace = "cash";
+
+
+        
+
+
+    
+    const newExpense = new Expense(ExpenseDate,ExpensePlace ,ExpenseName,ExpenseAmount,ExpenseCategory,ExpenseFrecuency);
     
     console.log(newExpense);
+
+    SetExpense(newExpense);
 
     
 
