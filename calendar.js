@@ -44,12 +44,29 @@ $(document).ready(function () {
   // Call function to build calendar based on given month and year
   renderCalendar(currentYear, currentMonth);
 
+  $('#previous-month').on('click', function(){
+    currentMonth--;
+    clearCalendar();
+    console.log(currentMonth);
+    renderCalendar(currentYear, currentMonth);
+  });
+
+  $('#next-month').on('click', function(){
+    currentMonth++;
+    clearCalendar();
+    console.log(currentMonth);
+    renderCalendar(currentYear, currentMonth);
+  });
+
+  function clearCalendar() {
+    $('#table-body').html("");
+  }
   
   // Event listener for calendar date click
   $("td").on("click", function (event) {
     console.log("Clicky Clack");
     var paymentDate = $(this)[0].firstChild.textContent;
-    var selectedDay = $(this).innerHTML;
+    var selectedDay = $(this);
 
     console.log(paymentDate);
 
@@ -59,7 +76,7 @@ $(document).ready(function () {
     // Submit information
     $('#modal-button-submit').on('click', function(event){
       event.preventDefault();
-      getModalInformation();
+      getModalInformation(selectedDay);
       clearModal();
     });
 
@@ -71,11 +88,12 @@ $(document).ready(function () {
   });
 
   // Get info from modal
-  function getModalInformation() {
+  function getModalInformation(selectedDay) {
     var expenseName = $('#expense-name').val();
     var expenseAmount = $('#expense-amount').val();
     var expenseFrequency = $('#select-frequency').val();
     var expenseCategory = $('#select-category').val();
+    var selectedDate = selectedDay.text();
 
     // Just a whole bunch of sanity checks
     console.log(expenseName);
@@ -84,7 +102,7 @@ $(document).ready(function () {
     console.log(expenseCategory);
 
     // This is supposed to write the info to the date <td> tag but it is not working...
-    selectedDay = expenseName + expenseAmount;
+    selectedDay.text(selectedDate + " " + expenseName + " " + expenseAmount);
     console.log(selectedDay);
 
     clearModal();
@@ -93,7 +111,7 @@ $(document).ready(function () {
   // Clear modal on close
   function clearModal() {
     // This will change the modal to hidden
-    // $('#calendar-modal').attr('stylye', 'display: none;');
+    // $('#calendar-modal').attr('style', 'display: none;');
     $('#expense-name').val("");
     $('#expense-amount').val("");
   }
