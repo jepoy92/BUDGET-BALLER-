@@ -160,7 +160,6 @@ p {
     background-image: url("Assets/cashbanner.jpg");
 }
 
-
 /*added month-name styling w/google fonts*/
 #month-name {
     color:blue;
@@ -172,7 +171,6 @@ p {
 }
 /*added background color to html*/
 .background,
-.columns,
 .row,
 .card {
     background-color: cadetblue;
@@ -240,11 +238,56 @@ progress[value] {
     width: 600px;
     height: 420px;
 }
-#month-generate {
-    border-color: black;
-    border-width: thick;
-    }
 
-td {
+.calendar-container-div {
+    margin: auto;
+    width: 50%;
+    margin-top: 50px;
+}
+
+#previous-month {
+    width: 100px;
+    height: 50px;
     border: 1px solid black;
+    border-radius: 15%;
+}
+
+#next-month {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 15%;
+}
+
+.calendar-heading {
+    font-size: 40px;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 25%;
+    background-color: steelblue;
+}
+
+.weekday {
+    text-align: center;
+    border: 1px solid black;
+    width: 150px;
+}
+
+.calendar-table-data {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+
+.calendar-ptag {
+    text-align: center;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    border-radius: 15%;
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-bottom: 100%;
 }
