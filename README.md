@@ -2,7 +2,7 @@
 [Deployed Site](https://jepoy92.github.io/BUDGET-BALLER-/index.html)
 
 ## About
-Budget Baller is a site that allows you to manage your budget like a "Balla". Through the use of {{{API NAME HERE}}} and {{{API NAME HERE}}}. User's can link their bank account, keep track of reoccuring payments, monitor spending habits, and calculate bill splitting between freinds or roomates.
+Budget Baller is a site that allows you to manage your budget like a "Baller". Through the use of {{{API NAME HERE}}} and {{{API NAME HERE}}}
 
 ## Usage
 
@@ -11,9 +11,11 @@ This project was made in collaboration with:
 @jepoy92
 @AldoCarrillo
 @JonesElliott
+@Iansachs1
+@danielbv92
 
 ### Calendar
-The calendar was built using Kim Heidorn's calendar as a guide through her explanation on dev.to
+The calendar was built using Kim Heidorn's calendar as a guide through her explanation on dev.to. The bare minimum of html was coded to make creating the calendar easier but the majority of it is generated through JavaScript.
 
 [Kim Heidorn Calendar Walkthrough](https://dev.to/knheidorn/making-a-calendar-in-vanilla-javascript-48j8)
 

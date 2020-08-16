@@ -5,35 +5,50 @@ var currentMonth = new Date().getMonth();
 
 // Function to build the calendar
 function renderCalendar(year, month) {
+  // Using Date() to calculate date information to display on the calendar
   let startOfMonth = new Date(year, month).getDay();
   let numOfDays = 32 - new Date(year, month, 32).getDate();
   let renderNum = 1;
 
+  // Retrieve HTML elements to write to
   let tableBody = document.getElementById("table-body");
   let renderMonth = document.getElementById("month");
   let renderYear = document.getElementById("year");
 
+  // Formats the current month into a String to be written at the top of the calendar. Ex: 7 === Augsut
   const today = new Date(currentYear, currentMonth);
   const monthString = today.toLocaleString("default", { month: "long" });
 
   renderMonth.textContent = monthString;
   renderYear.textContent = year;
 
+  // Loop through to create the rows (weeks) of the calendar
   for (i = 0; i < 6; i++) {
     let row = document.createElement("tr");
+
+    // Loop through to create each day of the week
     for (j = 0; j < 7; j++) {
+
+      // Loop to check what day of the week the first day of the month starts
+      // Creates empty days prior to creating the first day of the month
       if (i === 0 && j < startOfMonth) {
         let td = document.createElement("td");
         td.classList.add("empty");
         td.classList.add("calendar-table-data");
         row.append(td);
+
+        // If the last day of the month has been written then break out of the loop
       } else if (renderNum > numOfDays) {
         break;
+
+        // Write the actual days of the month
       } else {
+        // This will be the "box" for each day
         let td = document.createElement("td");
         td.setAttribute("id", renderNum);
         td.setAttribute("class", "calendar-table-data");
 
+        // This will hold the date of each day
         let pTag = document.createElement("p");
         pTag.textContent = renderNum;
         pTag.setAttribute("class", "calendar-ptag");
@@ -43,24 +58,25 @@ function renderCalendar(year, month) {
         renderNum++;
       }
     }
+    // Append constructed rows to the table element
     tableBody.append(row);
   }
 }
 
 // Call function to build calendar based on given month and year
 renderCalendar(currentYear, currentMonth);
+
 // Button functionality to go to previous month
 $("#previous-month").on("click", function () {
   currentMonth--;
   clearCalendar();
-  console.log(currentMonth);
   renderCalendar(currentYear, currentMonth);
 });
+
 // Button functionality to go to next month
 $("#next-month").on("click", function () {
   currentMonth++;
   clearCalendar();
-  console.log(currentMonth);
   renderCalendar(currentYear, currentMonth);
 });
 
@@ -68,6 +84,7 @@ $("#next-month").on("click", function () {
 function clearCalendar() {
   $("#table-body").html("");
 }
+
 
 function loadExpenses() {
   if(JSON.parse(localStorage.getItem("Storaged-Expenses"))){
@@ -83,7 +100,7 @@ function loadExpenses() {
           // console.log(newDate);
 
           var newText = document.createElement('p');
-          newText.textContent = (newDate + " " + newName + " " + newAmount);
+          newText.textContent = (" " + newName + " " + newAmount);
 
           $('#' + newDate).append(newText);
       });
@@ -108,9 +125,6 @@ function SetExpense(expense){
   loadExpenses();
 }
 
-
-
-
 class Expense {
   constructor(date, place, name, amount,  category ,frecuency) {
       this.date = date;
@@ -127,15 +141,13 @@ class Expense {
 }
 
 
-
-
 // Event listener for calendar date click
 $("td").on("click", function (event) {
-  console.log("Clicky Clack");
   var paymentDate = $(this)[0].firstChild.textContent;
   var selectedDay = $(this);
 
   console.log(paymentDate);
+  console.log("Calendar: " + selectedDay);
 
   // This will change the modal from hidden to display
   $("#modal").toggleClass("modal-display");
@@ -162,31 +174,28 @@ function getModalInformation(selectedDay, paymentDate) {
   var ExpenseCategory = $("#select-category").val();
   var ExpenseDate = selectedDay.text();
 
+  console.log("Get Modal Info: " + selectedDay);
   // Just a whole bunch of sanity checks
   console.log(ExpenseName);
   console.log(ExpenseAmount);
   console.log(ExpenseFrecuency);
   console.log(ExpenseCategory);
 
-  // selectedDay.text(ExpenseDate + " " + ExpenseName + " " + ExpenseAmount);
-
   var newText = document.createElement('p');
-  newText.textContent = (ExpenseDate + " " + ExpenseName + " " + ExpenseAmount);
+  newText.textContent = (" " + ExpenseName + " " + ExpenseAmount);
   selectedDay.append(newText);
-  console.log(selectedDay);
 
   const newExpense = new Expense(ExpenseDate,"place",ExpenseName,ExpenseAmount,ExpenseCategory,ExpenseFrecuency);
-    
-  console.log(newExpense);
 
   SetExpense(newExpense);
-
   clearModal();
 }
 
 // Clear modal on close
 function clearModal() {
   // This will change the modal to hidden
+  selectedDay = "";
+  console.log("Clear Modal: " + selectedDay);
   $("#modal").addClass("modal-display");
   $("#expense-name").val("");
   $("#expense-amount").val("");
