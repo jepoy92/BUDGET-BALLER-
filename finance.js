@@ -33,6 +33,7 @@ const categories ={
 function loadBankInfo(){
 
     var BankBalance  = document.getElementById("Bank-Amount");
+    var CardBalance = document.getElementById("Card-Amount");
     
     $.ajax({
         url: "https://ws.adanta.mx/api/Customer/Account/22",
@@ -42,31 +43,17 @@ function loadBankInfo(){
             console.log(Customer);
             BankBalance.textContent = Customer.balance ;
             console.log("Customer Bank Balance:  " + Customer.balance);
-
-        }
-    });
-
-}
-
-function loadCardInfo(){
-
-    var CardBalance = document.getElementById("Card-Amount");
-    
-    $.ajax({
-        url: "https://ws.adanta.mx/api/Customer/Account/22",
-        type: 'GET',
-        dataType: 'json',
-        success: function (Customer) {
             CardBalance.textContent = Customer.card;
-            
             console.log("Customer Card Balance:  " + Customer.card);
+            loadExpenses();
+            loadBalance();
 
         }
     });
 
-
-    
 }
+
+
 
 function loadInfoCash(){
    
@@ -115,20 +102,45 @@ function SetCashStorage(cashToSave){
 function loadMoneyInfo(){
 
     loadBankInfo();
-    loadCardInfo();
     loadInfoCash();
 
     loadBalance();
 
 }
 
+function SubsFromBalance(TotalBank,TotalCard,TotalCash){
+   
+    $("#Bank-Amount").text($("#Bank-Amount").text()-TotalBank);
+    $("#Card-Amount").text($("#Card-Amount").text()-TotalCard);
+    $("#Cash-Amount").text($("#Cash-Amount").text()-TotalCash);
+
+    loadBalance();
+
+
+}
+
+
 function loadIncomes(){
+    
+
+
+
+}
+
+function ClearExpenses(){
+    var ExpensesList = document.getElementById("Expenses-List");
+        ExpensesList.innerHTML = "";
 
 
 }
 
 function loadExpenses() {
+    
+    var TotalBank = 0;
+    var TotalCard = 0;
+    var TotalCash =0;
 
+    ClearExpenses();
 
     if(JSON.parse(localStorage.getItem("Storaged-Expenses"))){
         var StoragedExpenses = JSON.parse(localStorage.getItem("Storaged-Expenses"));
@@ -146,7 +158,6 @@ function loadExpenses() {
             
             var ExpensePlace  = document.createElement("td");
                 ExpensePlace.setAttribute("id","place");
-
             var PlaceImg = document.createElement("img");
             if(element.place == "bank"){
                 PlaceImg.setAttribute("src","Assets/bank.png");
@@ -172,19 +183,20 @@ function loadExpenses() {
 
             var ExpenseAmount = document.createElement("td");
             ExpenseAmount.setAttribute("id","amount");
-            var AmountImg = $("<img>", {src: "./Assets/DOLLA-DOLLA-BILLS.png",alt: "Dollar Sign"});
-            ExpenseAmount.append(AmountImg);
-
-
+            var AmountImg = document.createElement("img");
+            
+            AmountImg.setAttribute("src","Assets/DOLLA-DOLLA-BILLS.png");
+            AmountImg.setAttribute("alt","icon of dollar");
+            
             var ExpenseCategory = document.createElement("td");
             ExpenseCategory.setAttribute("id","category");
 
 
 
             ExpenseDate.textContent = element.date;
-            
             ExpenseName.textContent = element.name;
             ExpenseAmount.textContent = element.amount;
+            ExpenseAmount.prepend(AmountImg);
             ExpenseCategory.textContent = element.category;
 
 
@@ -195,10 +207,32 @@ function loadExpenses() {
             ExpenseElement.appendChild(ExpenseCategory);
 
             ExpenseList.prepend(ExpenseElement);
+
+
+            switch (element.place) {
+                case "bank":
+                    TotalBank += parseInt(element.amount);
+                    break;
+
+                case "card":
+                    TotalCard += parseInt(element.amount);
+                    break;
+
+                case "cash":
+                    TotalCash += parseInt(element.amount);
+                    break;
+            
+                default:
+                    break;
+            }
+            
+            
             
         });
 
-        
+         
+
+        SubsFromBalance(TotalBank,TotalCard,TotalCash);
                    
     }
         
@@ -218,7 +252,7 @@ function SetExpense(expense){
     ExpensesList.push(expense);
     localStorage.setItem("Storaged-Expenses", JSON.stringify(ExpensesList));
 
-    loadExpenses();
+    loadMoneyInfo();
 
 
 
@@ -228,21 +262,29 @@ function clearModal(){
 
     $("#expense-name").val("");
     $("#expense-amount").val("");
-    $("#select-frequency").val("once");
-    $("#select-category").val("food");
+    $("#select-frequency").val("Once");
+    $("#select-category").val("Food");
     
     
     document.getElementById("bank-radio").checked = false;    
     document.getElementById("card-radio").checked = false;
     document.getElementById("cash-radio").checked = false;
+
+    $("#modal").addClass("modal-display");
         
+
+}
+
+
+function clearModal2(){
+    $("#modal2").addClass("modal-display");
 
 }
 
 
 /* Program Starts Here */
 //demo storage
-SetCashStorage("200");
+SetCashStorage("500");
 
 //load the money info from differents sources
 loadMoneyInfo();
@@ -251,18 +293,22 @@ loadMoneyInfo();
 loadIncomes();
 
 //load the expenses
-loadExpenses();
+//loadExpenses();
 
 
 
-$("#Add-Button").click( function(event){
+$("#Add-Expense").click( function(event){
     console.log("Button Clicked");
 
     $("#modal").toggleClass("modal-display");
 
 
-    
+});
 
+$("#Add-Income").click( function(event){
+    console.log("Button Clicked");
+
+    $("#modal2").toggleClass("modal-display");
 
 
 });
@@ -312,12 +358,23 @@ $("#modal-button-submit").click( function(event){
     clearModal();
 
 
-    
-
-
 });
 
 $("#modal-button-cancel").click( function(event){
-    $("#modal").addClass("modal-display");
+    
+    clearModal();
+
+});
+
+
+$("#modal2-button-submit").click( function(event){
+    clearModal2();
+
+});
+
+
+$("#modal2-button-cancel").click( function(event){
+    
+    clearModal2();
 
 });

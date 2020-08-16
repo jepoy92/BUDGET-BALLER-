@@ -178,7 +178,7 @@ p {
     background-color: cadetblue;
 }
 
-#modal-button-submit {
+#modal-button-submit,#modal2-button-submit {
     background-color: limegreen;
     margin-left: 20px;
     margin-bottom: auto;
@@ -188,7 +188,7 @@ p {
     border-radius: 10px;
 }
 
-#modal-button-cancel {
+#modal-button-cancel,#modal2-button-cancel {
     background-color: red;
     margin-right: 20px;
     margin-bottom: 5px;
@@ -215,7 +215,7 @@ progress[value] {
     display: none; /* Hidden by default */
 }
 
-#modal {
+#modal, #modal2 {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */

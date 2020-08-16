@@ -92,12 +92,17 @@
             <div class="card">
                 <div id="Balance-Container">
                     <span id="span-balance">Balance</span>
-                    <p id="Balance-Amount">$900</p>
+                    <p id="Balance-Amount">900</p>
                 </div>
             </div>
 
             <div>
-                <button id="Add-Button"> ADD </button>
+                <button id="Add-Expense"> ADD Expense </button>
+
+            </div>
+
+            <div>
+                <button id="Add-Income"> ADD Income </button>
 
             </div>
 
@@ -121,7 +126,7 @@
                                 <td id="date-income">[Date]</td>
                                 <td id="place-income"><img src="./Assets/cash-large.png" alt="Cash"></td>
                                 <td id="name-income">Paycheck</td>
-                                <td id="amount-income"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign"></td>
+                                <td id="amount-income"><img src="./Assets/DOLLA-DOLLA-BILLS.png" alt="Dollar Sign">0</td>
                             </tr>
                         </tbody>
                     </table>
@@ -187,9 +192,9 @@
 <div id="modal" class="modal-display">
     <div id="modal-content">
 
-        <div id="calendar-modal">
+        <div id="Outcome-modal">
             <form>
-                <h5>Enter New Reoccuring Payment</h5>
+                <h5>Enter New Expnese</h5>
                 <!-- Expense Name -->
                 <label for="expense-name">Expense Name:</label>
                 <input id="expense-name" type="text" placeholder="Example: Phone Bill">
@@ -207,20 +212,20 @@
                 <!-- Expense Frequency -->
                 <label for="expense-frequency">Frequency:</label>
                 <select name="frequency" id="select-frequency">
-                    <option value="once">Once</option>
-                    <option value="weekly">Weekly</option>
-                    <option value="monthly">Monthly</option>
-                    <option value="anually">Anually</option>
+                    <option value="Once">Once</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Anually">Anually</option>
                 </select>
                 <!-- Expense Category -->
                 <label for="expense-category">Category:</label>
                 <select name="category" id="select-category">
-                    <option value="food">Food</option>
-                    <option value="travel">Travel</option>
-                    <option value="home">Home</option>
-                    <option value="car">Car</option>
-                    <option value="bill">Bill</option>
-                    <option value="entertainment">Entertainment</option>
+                    <option value="Food">Food</option>
+                    <option value="Travel">Travel</option>
+                    <option value="Home">Home</option>
+                    <option value="Car">Car</option>
+                    <option value="Bill">Bill</option>
+                    <option value="Entertainment">Entertainment</option>
                 </select>
                 <!-- Submit and Cancel buttons -->
                 <button type = "button" id="modal-button-submit">Submit</button>
@@ -232,6 +237,62 @@
     </div>
 
 </div>
+
+
+
+
+
+<div id="modal2" class="modal-display">
+    <div id="modal-content">
+
+        <div id="Income-modal">
+            <form>
+                <h5>Enter New Income</h5>
+                <!-- Expense Name -->
+                <label for="income-name">Income Name:</label>
+                <input id="income-name" type="text" placeholder="Example: Paycheck">
+                <!-- Expense Amount -->
+                <label for="income-amount">Amount:</label>
+                <input id="income-amount" type="text" placeholder="Example: $1000">
+
+                <p>Select the Account:</p>
+                <input type="radio" id="bank-radio" name="gender" value="male">
+                <label for="bank">Bank</label>
+                <input type="radio" id="card-radio" name="gender" value="male">
+                <label for="card">Card</label>
+                <input type="radio" id="cash-radio" name="gender" value="male">
+                <label for="cash">Cash</label><br>
+                <!-- Expense Frequency -->
+                <label for="select-frequency">Frequency:</label>
+                <select name="frequency" id="select-frequency">
+                    <option value="Once">Once</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Anually">Anually</option>
+                </select>     
+                <!-- Submit and Cancel buttons -->
+                <button type = "button" id="modal2-button-submit">Submit</button>
+                <button type = "button" id="modal2-button-cancel">Cancel</button>
+            </form>
+
+        </div>  
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
