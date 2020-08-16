@@ -79,7 +79,7 @@
                                 <img src="Assets/cash-large.png" alt="icon of a credit card">
                                 Cash
                             </h1>
-                            <p id="Cash-Amount">0</p>
+                            <p id="Cash-Amount" >0</p>
                         </div>
                     </div>
                 </div>
@@ -121,8 +121,8 @@
                               <th style="text-align:center" width="10">Amount</th>
                             </tr>
                           </thead>
-                        <tbody>
-                            <tr id="incomes-list">
+                        <tbody id="Incomes-List">
+                            <tr >
                                 <td id="date-income">[Date]</td>
                                 <td id="place-income"><img src="./Assets/cash-large.png" alt="Cash"></td>
                                 <td id="name-income">Paycheck</td>
@@ -194,7 +194,7 @@
 
         <div id="Outcome-modal">
             <form>
-                <h5>Enter New Expnese</h5>
+                <h5>New Expense</h5>
                 <!-- Expense Name -->
                 <label for="expense-name">Expense Name:</label>
                 <input id="expense-name" type="text" placeholder="Example: Phone Bill">
@@ -203,11 +203,11 @@
                 <input id="expense-amount" type="text" placeholder="Example: $54.75">
 
                 <p>Select Payment:</p>
-                <input type="radio" id="bank-radio" name="gender" value="male">
+                <input type="radio" id="bank-radio"  value="expense" name="expensemodal">
                 <label for="bank">Bank</label>
-                <input type="radio" id="card-radio" name="gender" value="male">
+                <input type="radio" id="card-radio"  value="expense" name="expensemodal">
                 <label for="card">Card</label>
-                <input type="radio" id="cash-radio" name="gender" value="male">
+                <input type="radio" id="cash-radio"  value="expense" name="expensemodal">
                 <label for="cash">Cash</label><br>
                 <!-- Expense Frequency -->
                 <label for="expense-frequency">Frequency:</label>
@@ -247,7 +247,7 @@
 
         <div id="Income-modal">
             <form>
-                <h5>Enter New Income</h5>
+                <h5>New Income</h5>
                 <!-- Expense Name -->
                 <label for="income-name">Income Name:</label>
                 <input id="income-name" type="text" placeholder="Example: Paycheck">
@@ -256,15 +256,15 @@
                 <input id="income-amount" type="text" placeholder="Example: $1000">
 
                 <p>Select the Account:</p>
-                <input type="radio" id="bank-radio" name="gender" value="male">
+                <input type="radio" id="bank-radio-income" value="income" name="incomemodal">
                 <label for="bank">Bank</label>
-                <input type="radio" id="card-radio" name="gender" value="male">
+                <input type="radio" id="card-radio-income" value="income" name="incomemodal">
                 <label for="card">Card</label>
-                <input type="radio" id="cash-radio" name="gender" value="male">
+                <input type="radio" id="cash-radio-income" value="income" name="incomemodal">
                 <label for="cash">Cash</label><br>
                 <!-- Expense Frequency -->
                 <label for="select-frequency">Frequency:</label>
-                <select name="frequency" id="select-frequency">
+                <select name="frequency" id="income-frequency">
                     <option value="Once">Once</option>
                     <option value="Weekly">Weekly</option>
                     <option value="Monthly">Monthly</option>
