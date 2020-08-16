@@ -8,11 +8,14 @@ Budget Baller is a site that allows you to manage your budget like a "Baller". T
 
 ## Credit
 This project was made in collaboration with:
-@jepoy92
-@AldoCarrillo
-@JonesElliott
-@Iansachs1
-@danielbv92
+
+- [Jeffrey Choi](https://github.com/jepoy92)
+- [Aldo Carrillo](https://github.com/AldoCarrillo)
+- [Jones Elliott](https://github.com/JonesElliott)
+- [Ian Sachs](https://github.com/Iansachs1)
+- [Daniel Beltran](https://github.com/danielbv92)
+
+## Homepage
 
 ### Calendar
 The calendar was built using Kim Heidorn's calendar as a guide through her explanation on dev.to. The bare minimum of html was coded to make creating the calendar easier but the majority of it is generated through JavaScript.

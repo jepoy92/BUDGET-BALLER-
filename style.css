@@ -236,6 +236,20 @@ progress[value] {
     padding: 20px;
     z-index: -1;
     width: 600px;
+    height: 500px;
+}
+
+#modal-content2 {
+    font-family: 'Bangers';
+    text-shadow: white .5px .5px;
+    margin: auto;
+    width: 50%;
+    background-color:cadetblue;
+    border: 3px solid black;
+    border-radius: 25px;
+    padding: 20px;
+    z-index: -1;
+    width: 600px;
     height: 420px;
 }
 
