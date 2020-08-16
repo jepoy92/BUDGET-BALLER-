@@ -25,14 +25,21 @@ function renderCalendar(year, month) {
       if (i === 0 && j < startOfMonth) {
         let td = document.createElement("td");
         td.classList.add("empty");
+        td.classList.add("calendar-table-data");
         row.append(td);
       } else if (renderNum > numOfDays) {
         break;
       } else {
         let td = document.createElement("td");
         td.setAttribute("id", renderNum);
-        td.textContent = renderNum;
+        td.setAttribute("class", "calendar-table-data");
+
+        let pTag = document.createElement("p");
+        pTag.textContent = renderNum;
+        pTag.setAttribute("class", "calendar-ptag");
+
         row.append(td);
+        td.append(pTag);
         renderNum++;
       }
     }
@@ -63,8 +70,6 @@ function clearCalendar() {
 }
 
 function loadExpenses() {
-
-
   if(JSON.parse(localStorage.getItem("Storaged-Expenses"))){
       var StoragedExpenses = JSON.parse(localStorage.getItem("Storaged-Expenses"));
       console.log(StoragedExpenses);
@@ -74,21 +79,20 @@ function loadExpenses() {
           var newName = element.name;
           var newAmount = element.amount;
 
-          console.log(element);
-          console.log(newDate);
+          // console.log(element);
+          // console.log(newDate);
 
-          $('#' + newDate).text(newDate + " " + newName + " " + newAmount);
+          var newText = document.createElement('p');
+          newText.textContent = (newDate + " " + newName + " " + newAmount);
 
-
+          $('#' + newDate).append(newText);
       });
-                 
   }
-      
   else
       console.log("not storaged");
-  
 }
 
+loadExpenses();
 
 function SetExpense(expense){
 
@@ -164,8 +168,11 @@ function getModalInformation(selectedDay, paymentDate) {
   console.log(ExpenseFrecuency);
   console.log(ExpenseCategory);
 
-  // This is supposed to write the info to the date <td> tag but it is not working...
-  selectedDay.text(ExpenseDate + " " + ExpenseName + " " + ExpenseAmount);
+  // selectedDay.text(ExpenseDate + " " + ExpenseName + " " + ExpenseAmount);
+
+  var newText = document.createElement('p');
+  newText.textContent = (ExpenseDate + " " + ExpenseName + " " + ExpenseAmount);
+  selectedDay.append(newText);
   console.log(selectedDay);
 
   const newExpense = new Expense(ExpenseDate,"place",ExpenseName,ExpenseAmount,ExpenseCategory,ExpenseFrecuency);
