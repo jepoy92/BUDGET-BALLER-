@@ -201,6 +201,7 @@ p {
 /*added container with background image*/
 .container-full {
     background-image: url("Assets/cashbanner.jpg");
+    font-family: 'Bangers';
 }
 
 /*added month-name styling w/google fonts*/
@@ -291,6 +292,8 @@ label {
     font-family: 'Bangers';
     /* text-shadow: white .5px .5px; */
     font-size: 24px;
+    color: white;
+    text-shadow: white .25px .25px;
     margin: auto;
     margin-bottom: auto;
     width: 50%;
