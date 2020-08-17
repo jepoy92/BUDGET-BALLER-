@@ -151,7 +151,9 @@ p {
 #Payments-Container{
     background-color:red;
     opacity: 60%;
-    border-radius: 15px
+    border-radius: 15px;
+    height: auto;
+    padding-bottom: auto;
 }
 
 
