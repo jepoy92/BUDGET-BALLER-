@@ -11,36 +11,38 @@
 </head>
 <body>
 
-    <div class="row medium-down-12" id="nav-bar">
-        <div class="column">
-            <div class="card" id="nav-bar">
-                <div class="card-section" >
-                    <div class="column">
-                        <span class="label" id="BudgetBallers">Budget Baller$</span>
-                        <nav class="menu">
-                            <ol>
-                              <li><a href="./index.html">Home</a></li>
-                              <li><a href="./budget.html">Budget</a></li>
-                              <li><a href="./calendar.html">Calender</a></li>
-
-                            </ol>
-                          </nav>
-                    </div>
-                </div>
+    <div class="row">
+        <div class="card" id="nav-bar">
+          <div class="card-section">
+            <div class="column"></div>
+            <div class="column">
+              <span class="label" id="BudgetBallers">Budget Baller$</span>
+              <nav class="menu">
+                <ol>
+                  <li><a href="./index.html">Home</a></li>
+                  <li><a href="./budget.html">Budget</a></li>
+                  <li><a href="./calendar.html">Calendar</a></li>
+                </ol>
+              </nav>
             </div>
-    
+          </div>
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="column" id="progressBar">
+
+            <progress id="entertainment" max="100" value="80"></progress>
+
+            <progress id="travel" max="100" value="22"></progress>
+        
+            <progress id="food" max="100" value="35"></progress>
+        
+            <progress id="home" max="100" value="45"></progress>
+        
+            <progress id="car" max="100" value="90"></progress>
         </div>
     </div>
-
-    <progress id="entertainment" max="100" value="80"></progress>
-
-    <progress id="travel" max="100" value="22"></progress>
-
-    <progress id="food" max="100" value="35"></progress>
-
-    <progress id="home" max="100" value="45"></progress>
-
-    <progress id="car" max="100" value="90"></progress>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
