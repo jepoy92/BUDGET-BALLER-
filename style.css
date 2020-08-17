@@ -171,12 +171,7 @@ p {
 .button {
     font-family: 'Bangers';
 }
-/*added background color to html*/
-.background,
-.row,
-.card {
-    background-color: cadetblue;
-}
+
 
 #modal-button-submit,#modal2-button-submit {
     background-color: limegreen;
