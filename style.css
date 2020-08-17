@@ -8,6 +8,10 @@ body{
     background-color: black;
 }
 
+.card {
+    margin-left: auto ;
+    margin-right: auto;
+}
 .menu {
     float: right;
     float: center;
