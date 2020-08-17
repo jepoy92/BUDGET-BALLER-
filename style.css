@@ -222,7 +222,6 @@ progress[value] {
 }
 #modal-content {
     font-family: 'Bangers';
-    text-shadow: white .5px .5px;
     margin: auto;
     width: 50%;
     background-color:cadetblue;
@@ -236,7 +235,8 @@ progress[value] {
 
 #modal-content2, #modal-content3{
     font-family: 'Bangers';
-    text-shadow: white .5px .5px;
+    color: white;
+    text-shadow: white .25px .25px;
     margin: auto;
     width: 50%;
     background-color:cadetblue;
