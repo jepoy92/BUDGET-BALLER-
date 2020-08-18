@@ -86,8 +86,7 @@ function clearCalendar() {
   tableBody.empty();
 }
 
-
-
+// Load expenses from local storage
 function loadExpenses() {
   if(JSON.parse(localStorage.getItem("Storaged-Expenses"))){
       var StoragedExpenses = JSON.parse(localStorage.getItem("Storaged-Expenses"));
@@ -113,8 +112,10 @@ function loadExpenses() {
       console.log("not storaged");
 }
 
-// loadExpenses();
+// Load Expenses when page is loaded
+loadExpenses();
 
+// Function to save expenses to lcoal storage
 function SetExpense(expense){
 
   if(JSON.parse(localStorage.getItem("Storaged-Expenses")))
@@ -146,28 +147,11 @@ class Expense {
   };
 }
 
-function ClearExpenses(paymentDate){
-  var ExpensesList = document.getElementById("#" + paymentDate);
-  console.log(paymentDate);
-  console.log(ExpensesList);
-  // ExpensesList.innerHTML = "";
-
-}
-
-
 // Event listener for calendar date click
+// Load modal and get user information
 $("td").on("click", function (event) {
-  console.log(selectedDayElement);
   var paymentDate = $(this)[0].firstChild.textContent;
-  // var selectedDayElement = $('#' + paymentDate);
-
-  console.log("PaymentDate Creation: " + paymentDate);
   var selectedDayElement = document.getElementById(paymentDate);
-  console.log(document.getElementById(paymentDate));
-
-  console.log(paymentDate);
-  console.log(selectedDayElement);
-  console.log("Calendar: " + selectedDayElement);
 
   // This will change the modal from hidden to display
   $("#modal").toggleClass("modal-display");
@@ -192,23 +176,8 @@ function getModalInformation(selectedDayElement, paymentDate) {
   var ExpenseAmount = $("#expense-amount").val();
   var ExpenseFrecuency = $("#select-frequency").val();
   var ExpenseCategory = $("#select-category").val();
+  // Remember to remove and fix this later!!!!!!!!
   var ExpenseDate = "08/" + paymentDate + "/2020";
-
-  console.log("Get Modal Info: " + paymentDate);
-  // Just a whole bunch of sanity checks
-  console.log(ExpenseName);
-  console.log(ExpenseAmount);
-  console.log(ExpenseFrecuency);
-  console.log(ExpenseCategory);
-
-  console.log("TEST: " + paymentDate);
-  console.log("TEST: " + selectedDayElement);
-
-  // var newText = document.createElement('p');
-  // newText.textContent = (" " + ExpenseName + " " + ExpenseAmount);
-  // newText.setAttribute('id', "p" + ExpenseDate);
-  // selectedDayElement = document.getElementById(paymentDate);
-  // selectedDayElement.append(newText);
 
   const newExpense = new Expense(ExpenseDate,"place",ExpenseName,ExpenseAmount,ExpenseCategory,ExpenseFrecuency);
 
