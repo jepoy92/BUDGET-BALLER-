@@ -82,6 +82,7 @@ button:hover {
     top: 65%;
     left: 47%;
 }
+
 #background {
     justify-content: center;
     position: relative;
@@ -200,10 +201,17 @@ p {
 
 }
 
+#balance-dollar-sign {
+    margin-left:170%
+}
+
 #Bank-Amount {
     margin-right: 30%;
 }
 
+#Balance-Amount{
+    margin-right:25%
+}
 
 #Cards-Container {
     background-color: silver;
