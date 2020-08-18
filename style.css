@@ -147,6 +147,10 @@ button:hover {
     line-height: 12px;
 }
 
+#Outcomes-Container th {
+    width: auto;
+}
+
 td #name {
     margin: 300000px;
 }
