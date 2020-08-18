@@ -241,7 +241,7 @@ p {
 
 
 
-#modal-button-submit,#modal2-button-submit {
+#modal-button-submit,#modal2-button-submit,#modal3-button-submit {
     background-color: limegreen;
     margin-left: 20px;
     margin-bottom: auto;
@@ -251,7 +251,7 @@ p {
     border-radius: 10px;
 }
 
-#modal-button-cancel,#modal2-button-cancel {
+#modal-button-cancel,#modal2-button-cancel,#modal3-button-cancel {
     background-color: red;
     margin-right: 20px;
     margin-bottom: 5px;
@@ -289,7 +289,7 @@ label {
     display: none; /* Hidden by default */
 }
 
-#modal, #modal2 {
+#modal, #modal2, #modal3 {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */

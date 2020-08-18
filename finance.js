@@ -51,8 +51,6 @@ function loadBalance(){
 
     balance.textContent = allbalances;
 
-    
-
 }
 
 //Saves CASH to local storage
@@ -450,7 +448,7 @@ function SetCatergories(){
         };
 
 
-        StoragedCategories = categoryElement
+        StoragedCategories = categoryElement;
         localStorage.setItem("Storaged-Categories", JSON.stringify(StoragedCategories));
 
         console.log(StoragedCategories);
