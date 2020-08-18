@@ -5,7 +5,7 @@ body{
 }
 
 #nav-bar {
-    background-color: black;
+    background-color: #0080ff;
 }
 
 
@@ -161,7 +161,8 @@ td #name {
 }
 
 img {
-    margin-bottom: 4px;
+    margin-top: auto;
+    margin-bottom:auto;
 }
 
 p {
@@ -179,6 +180,17 @@ p {
     font-size: 40px;
 }
 
+#dollar-sign {
+    margin-left:100%;
+    width:auto;
+    height: auto;
+
+}
+
+#Bank-Amount {
+    margin-right: 30%;
+}
+
 
 #Cards-Container {
     background-color: silver;
@@ -190,6 +202,10 @@ p {
     font-size: 40px;
 }
 
+#Card-Amount {
+    margin-right: 30%;
+}
+
 #Cash-Container {
     background-color:lightgreen;
     opacity: 75%;
@@ -198,6 +214,10 @@ p {
 
 #Cash-Container p {
     font-size: 40px;
+}
+
+#Cash-Amount {
+    margin-right: 30%;
 }
 
 #Balance-Container {
