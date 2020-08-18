@@ -305,6 +305,10 @@ label {
     width: 600px;
 }
 
+h5 {
+    text-align: center;
+}
+
 
 .calendar-container-div {
     margin: auto;
