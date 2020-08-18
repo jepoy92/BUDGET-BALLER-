@@ -121,16 +121,16 @@ button:hover {
     line-height: 12px;
 }
 
-/* #Incomes-Container th {
+#Incomes-Container th {
     width: auto;
-} */
+}
 
 #Outcomes-Container {
     justify-content: center;
     text-align: center;
     background: transparent;
     font-size: 24px;
-    /* background-color: red; */
+    background-color: red;
     opacity: 60%;
     color: white;
     border-radius: 15px;
@@ -147,9 +147,9 @@ button:hover {
     line-height: 12px;
 }
 
-/* #Outcomes-Container th {
+#Outcomes-Container th {
     width: auto;
-} */
+}
 
 td #name {
     margin: 300000px;
