@@ -6,6 +6,7 @@ body{
 #nav-bar {
     background-color: #dddddd;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: auto;
 }
 
 
@@ -34,6 +35,9 @@ button:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
+  #bank-card-cash-container h1 {
+      font-weight: bold;
+  }
 
 .menu {
     float: right;
@@ -102,6 +106,10 @@ button:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+#Balance-Container h1 {
+    font-weight: bold;
+    font-size: 50px;
+}
 #Incomes-Container {
     background-color:green;
     opacity: 75%;
@@ -193,6 +201,7 @@ p {
     padding-bottom: 10px;
     
 }
+
 
 #Bank-Container p {
     font-size: 40px;
