@@ -68,16 +68,26 @@ renderCalendar(currentYear, currentMonth);
 
 // Button functionality to go to previous month
 $("#previous-month").on("click", function () {
+  var prevMonth = new Date().getMonth();
   currentMonth--;
   clearCalendar();
   renderCalendar(currentYear, currentMonth);
+  console.log(currentMonth);
+  if (prevMonth === currentMonth) {
+    loadExpenses();
+  }
 });
 
 // Button functionality to go to next month
 $("#next-month").on("click", function () {
+  var nextMonth = new Date().getMonth();
   currentMonth++;
   clearCalendar();
   renderCalendar(currentYear, currentMonth);
+  console.log(currentMonth);
+  if (nextMonth === currentMonth) {
+    loadExpenses();
+  }
 });
 
 // Clear the calendar
@@ -102,7 +112,7 @@ function loadExpenses() {
           console.log(element.date);
 
           var newText = document.createElement('p');
-          newText.textContent = (" " + newName + " " + newAmount);
+          newText.textContent = (" " + newName + " $" + newAmount);
           newText.setAttribute('id', "p" + newDate);
 
           $('#' + parseInt(newDate)).append(newText);
