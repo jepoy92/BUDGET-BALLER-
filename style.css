@@ -6,6 +6,7 @@ body{
 #nav-bar {
     background-color: #dddddd;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    width: auto;
 }
 
 
@@ -34,6 +35,9 @@ button:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
 
+  #bank-card-cash-container h1 {
+      font-weight: bold;
+  }
 
 .menu {
     float: right;
@@ -94,9 +98,18 @@ button:hover {
 #Balance-Container {
     justify-content: center;
     text-align: center;
-    background: transparent;
+    background: transparent;        
+    color: black;
+    font-size: 58px;
+    background-color:lightgoldenrodyellow;
+    opacity:100%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
+#Balance-Container h1 {
+    font-weight: bold;
+    font-size: 50px;
+}
 #Incomes-Container {
     background-color:green;
     opacity: 75%;
@@ -118,7 +131,7 @@ button:hover {
     table-layout: fixed;
     font-size: 18px;
     text-align: center;
-    line-height: 20px;
+    line-height: auto;
 }
 
 #Incomes-Container th {
@@ -145,7 +158,7 @@ button:hover {
     table-layout: fixed;
     font-size: 18px;
     text-align: center;
-    line-height: 20px;
+    line-height: auto;
 }
 
 #Outcomes-Container table th {
@@ -189,6 +202,7 @@ p {
     
 }
 
+
 #Bank-Container p {
     font-size: 40px;
 }
@@ -217,6 +231,7 @@ p {
     background-color: silver;
     opacity: 75%;
     padding-bottom: 10px;
+    
 }
 
 #Cards-Container p {
@@ -239,11 +254,6 @@ p {
 
 #Cash-Amount {
     margin-right: 30%;
-}
-
-#Balance-Container {
-    color: green;
-    font-size: 58px;
 }
 
 /*added container with background image*/
@@ -280,6 +290,10 @@ p {
     font-size: 20px;
     padding: 8px;
     border-radius: 10px;
+}
+
+#Budget-Button {
+    margin-top: auto;
 }
 
 progress {
