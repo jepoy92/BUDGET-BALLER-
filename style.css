@@ -280,7 +280,6 @@ label {
     background-color:cadetblue;
     border: 3px solid black;
     border-radius: 25px;
-    padding: 20px;
     z-index: -1;
     width: 600px;
 }
@@ -297,7 +296,6 @@ label {
     background-color:cadetblue;
     border: 3px solid black;
     border-radius: 25px;
-    padding: 20px;
     z-index: -1;
     width: 600px;
 }
@@ -358,4 +356,16 @@ h5 {
     height: 25px;
     float: left;
     margin-bottom: 100%;
+}
+
+#Income-modal {
+    background-color: green;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#Outcome-modal {
+    background-color: red;
+    padding: 20px;
+    border-radius: 25px;
 }
