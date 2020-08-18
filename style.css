@@ -147,6 +147,18 @@ button:hover {
     line-height: 12px;
 }
 
+#Outcomes-Container table th {
+    width: auto;
+}
+
+#Outcomes-Container table th.Outcomes-Table-Place {
+    width: 16%;
+}
+
+#Outcomes-Container table th.Outcomes-Table-Category {
+    width: 24%;
+}
+
 #Outcomes-Container th {
     width: auto;
 }
@@ -309,8 +321,8 @@ label {
     margin: auto;
     margin-bottom: auto;
     width: 50%;
-    opacity: 90%;
-    background-color: red;
+    opacity: 100%;
+    background-color: indianred;
     border: 3px solid black;
     border-radius: 25px;
     padding: 20px;
