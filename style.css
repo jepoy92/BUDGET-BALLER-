@@ -114,7 +114,8 @@ button:hover {
     margin-left:auto;
     margin-right:auto;
     margin-top: auto;
-    width: auto;
+    width: 90%;
+    table-layout: fixed;
     font-size: 18px;
     text-align: center;
     line-height: 12px;
@@ -140,7 +141,8 @@ button:hover {
     margin-left:auto;
     margin-right:auto;
     margin-top: auto;
-    width: auto;
+    width: 90%;
+    table-layout: fixed;
     font-size: 18px;
     text-align: center;
     line-height: 12px;
