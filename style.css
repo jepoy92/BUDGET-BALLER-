@@ -149,6 +149,18 @@ button:hover {
     line-height: 12px;
 }
 
+#Outcomes-Container table th {
+    width: auto;
+}
+
+#Outcomes-Container table th.Outcomes-Table-Place {
+    width: 16%;
+}
+
+#Outcomes-Container table th.Outcomes-Table-Category {
+    width: 24%;
+}
+
 #Outcomes-Container th {
     width: auto;
 }
