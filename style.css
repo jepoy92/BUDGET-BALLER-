@@ -292,6 +292,10 @@ p {
     border-radius: 10px;
 }
 
+#Budget-Button {
+    margin-top: auto;
+}
+
 progress {
     height: 100px;
     width: 100%;
