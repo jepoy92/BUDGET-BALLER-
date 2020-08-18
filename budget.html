@@ -30,27 +30,74 @@
       </div>
 
     <div class="row">
+
+      <button id="Budget-Button"> ADD BUDGETS </button>
         <div class="column" id="progressBar">
 
-            <label for="Entertainment">Entertainment</label>
-            <progress id="Entertainment" max="100" value="80"></progress>
+          
+            <label for="Entertainment" >Entertainment</label>
+            <p id="current-entertainment">500</p>
+            <p id="total-entertainment">1000</p>
+            <progress id="entertainment-bar" max="100" value="80"></progress>
 
             <label for="travel">Travel</label>
-            <progress id="travel" max="100" value="22"></progress>
+            <p id="current-travel">500</p>
+            <p id="total-travel">1000</p>
+            <progress id="travel-bar" max="100" value="22"></progress>
             
             <label for="food">Food</label>
-            <progress id="food" max="100" value="35"></progress>
+            <p id="current-food">500</p>
+            <p id="total-food">1000</p>
+            <progress id="food-bar" max="100" value="35"></progress>
             
             <label for="home">Home</label>
-            <progress id="home" max="100" value="45"></progress>
+            <p id="current-home">500</p>
+            <p id="total-home">1000</p>
+            <progress id="home-bar" max="100" value="45"></progress>
             
             <label for="car">Car</label>
-            <progress id="car" max="100" value="90"></progress>
+            <p id="current-car">500</p>
+            <p id="total-car">1000</p>
+            <progress id="car-bar" max="100" value="90"></progress>
         </div>
     </div>
 
+
+    <div id="modal3" class="modal-display">
+      <div id="modal-content3">
+  
+          <div id="Budgets-modal">
+              <form>
+                  <h5>Set Budgets</h5>
+              
+                  <label for="budget-food">Budget for Food:</label>
+                  <input id="budget-food" type="text" placeholder=" $1000">
+                  
+                  <label for="budget-travel">Budget for Travel:</label>
+                  <input id="budget-travel" type="text" placeholder=" $1000">
+  
+                  <label for="budget-home">Budget for Home:</label>
+                  <input id="budget-home" type="text" placeholder=" $1000">
+
+                  <label for="budget-car">Budget for Car:</label>
+                  <input id="budget-car" type="text" placeholder=" $1000">
+
+                  <label for="budget-entertainment">Budget for Entertainment:</label>
+                  <input id="budget-entertainment" type="text" placeholder=" $1000">
+                  
+                  <button type = "button" id="modal3-button-submit">Submit</button>
+                  <button type = "button" id="modal3-button-cancel">Cancel</button>
+              </form>
+  
+          </div>  
+  
+      </div>
+  
+  </div>
+
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="finance.js"></script>
+    <script src="budget.js"></script>
 </body>
 </html>
