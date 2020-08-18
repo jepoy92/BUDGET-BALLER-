@@ -34,31 +34,75 @@
       <button id="Budget-Button"> ADD BUDGETS </button>
         <div class="column" id="progressBar">
 
-          
-            <label for="Entertainment" >Entertainment</label>
-            <p id="current-entertainment">500</p>
-            <p id="total-entertainment">1000</p>
+          <div class="card budget-entertainment-card budget-cards">
+            <label for="Entertainment" ><h3>Entertainment</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-entertainment">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p class="columns medium-1" id="total-entertainment">1000</p>
+              <p class="columns medium-2"></p>
+            </div>
             <progress id="entertainment-bar" max="100" value="80"></progress>
+          </div>
 
-            <label for="travel">Travel</label>
-            <p id="current-travel">500</p>
-            <p id="total-travel">1000</p>
+          <div class="card budget-travel-card budget-cards">
+            <label for="travel"><h3>Travel</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-travel">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p class="columns medium-1" id="total-travel">1000</p>
+              <p class="columns medium-2"></p>
+            </div>
             <progress id="travel-bar" max="100" value="22"></progress>
-            
-            <label for="food">Food</label>
-            <p id="current-food">500</p>
-            <p id="total-food">1000</p>
+          </div>
+
+          <div class="card budget-food-card budget-cards">
+            <label for="food"><h3>Food</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-food">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p id="total-food">1000</p>
+              <p class="columns medium-2"></p>
+            </div>
             <progress id="food-bar" max="100" value="35"></progress>
-            
-            <label for="home">Home</label>
-            <p id="current-home">500</p>
-            <p id="total-home">1000</p>
+          </div>
+
+          <div class="card budget-home-card budget-cards"> 
+            <label for="home"><h3>Home</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-home">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p class="columns medium-1" id="total-home">1000</p>
+              <p class="columns medium-2"></p>
+            </div>
             <progress id="home-bar" max="100" value="45"></progress>
-            
-            <label for="car">Car</label>
-            <p id="current-car">500</p>
-            <p id="total-car">1000</p>
+          </div>
+
+          <div class="card budget-car-card budget-cards">   
+            <label for="car"><h3>Car</h3></label>
+            <div class="row">
+              <p class="columns medium-1"></p>
+              <p class="columns medium-3 budget-amount-label">Amount Spent:</p>
+              <p class="columns medium-1" id="current-car">500</p>
+              <p class="columns medium-2"></p>
+              <p class="columns medium-2 budget-amount-label">Budget Total:</p>
+              <p class="columns medium-1" id="total-car">1000</p>
+              <p class="columns medium-2"></p>
             <progress id="car-bar" max="100" value="90"></progress>
+          </div>
+
         </div>
     </div>
 

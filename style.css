@@ -118,7 +118,7 @@ button:hover {
     table-layout: fixed;
     font-size: 18px;
     text-align: center;
-    line-height: 12px;
+    line-height: 20px;
 }
 
 #Incomes-Container th {
@@ -145,7 +145,7 @@ button:hover {
     table-layout: fixed;
     font-size: 18px;
     text-align: center;
-    line-height: 12px;
+    line-height: 20px;
 }
 
 #Outcomes-Container table th {
@@ -433,3 +433,46 @@ h5 {
     margin-bottom: 100%;
 }
 
+
+div.budget-entertainment-card {
+    background-color: lightgoldenrodyellow;
+}
+
+div.budget-travel-card {
+    background-color: lightgreen;
+}
+
+div.budget-food-card {
+    background-color: lightblue;
+}
+
+div.budget-home-card {
+    background-color: lightgray;
+}
+
+div.budget-car-card {
+    background-color: lightsalmon;
+}
+
+div.budget-cards {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+div.budget-cards label {
+    text-align: center;
+    
+}
+
+.budget-amount-label {
+    text-align: right;
+}
+ 
+div.budget-cards p {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+div.budget-cards label h3 {
+    font-weight: 600;
+}
