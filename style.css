@@ -5,7 +5,8 @@ body{
 }
 
 #nav-bar {
-    background-color: black;
+    background-color: #dddddd;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -23,7 +24,7 @@ body{
     padding: 2px 16px;
   }
 
-.button success{
+.button {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -41,7 +42,7 @@ button:hover {
     font-size: 24px;
     font-style: italic;
     justify-content: center;
-    font-family: 'Bangers';
+    color:white;
 }
 
 #BudgetBallers {
@@ -51,8 +52,6 @@ button:hover {
     content: center;
     margin-top: 5px;
     font-style: italic;
-
-    font-family: 'Bangers';
 }
 
 .first-card {
@@ -115,12 +114,16 @@ button:hover {
     margin-left:auto;
     margin-right:auto;
     margin-top: auto;
-    width: 450px;
+    width: 90%;
+    table-layout: fixed;
     font-size: 18px;
     text-align: center;
     line-height: 12px;
 }
 
+#Incomes-Container th {
+    width: auto;
+}
 
 #Outcomes-Container {
     justify-content: center;
@@ -138,10 +141,15 @@ button:hover {
     margin-left:auto;
     margin-right:auto;
     margin-top: auto;
-    width: 650px;
+    width: 90%;
+    table-layout: fixed;
     font-size: 18px;
     text-align: center;
     line-height: 12px;
+}
+
+#Outcomes-Container th {
+    width: auto;
 }
 
 td #name {
@@ -154,7 +162,8 @@ td #name {
 }
 
 img {
-    margin-bottom: 4px;
+    margin-top: auto;
+    margin-bottom:auto;
 }
 
 p {
@@ -172,6 +181,18 @@ p {
     font-size: 40px;
 }
 
+#dollar-sign {
+    margin-left:100%;
+    width:auto;
+    height: auto;
+    margin-top:10%;
+
+}
+
+#Bank-Amount {
+    margin-right: 30%;
+}
+
 
 #Cards-Container {
     background-color: silver;
@@ -183,6 +204,10 @@ p {
     font-size: 40px;
 }
 
+#Card-Amount {
+    margin-right: 30%;
+}
+
 #Cash-Container {
     background-color:lightgreen;
     opacity: 75%;
@@ -191,6 +216,10 @@ p {
 
 #Cash-Container p {
     font-size: 40px;
+}
+
+#Cash-Amount {
+    margin-right: 30%;
 }
 
 #Balance-Container {
@@ -210,9 +239,7 @@ p {
     font-family: 'Bangers', cursive;
 }
 
-.button {
-    
-}
+
 
 
 #modal-button-submit,#modal2-button-submit,#modal3-button-submit {
@@ -303,6 +330,10 @@ label {
     padding: 20px;
     z-index: -1;
     width: 600px;
+}
+
+h5 {
+    text-align: center;
 }
 
 
