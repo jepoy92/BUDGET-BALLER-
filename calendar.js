@@ -82,8 +82,10 @@ $("#next-month").on("click", function () {
 
 // Clear the calendar
 function clearCalendar() {
-  $("#table-body").html("");
+  const tableBody = $('#table-body');
+  tableBody.empty();
 }
+
 
 
 function loadExpenses() {
@@ -96,20 +98,22 @@ function loadExpenses() {
           var newName = element.name;
           var newAmount = element.amount;
 
-          // console.log(element);
-          // console.log(newDate);
+          console.log(element);
+          console.log(newDate);
+          console.log(element.date);
 
           var newText = document.createElement('p');
           newText.textContent = (" " + newName + " " + newAmount);
+          newText.setAttribute('id', "p" + newDate);
 
-          $('#' + newDate).append(newText);
+          $('#' + parseInt(newDate)).append(newText);
       });
   }
   else
       console.log("not storaged");
 }
 
-loadExpenses();
+// loadExpenses();
 
 function SetExpense(expense){
 
@@ -121,7 +125,9 @@ function SetExpense(expense){
 
   ExpensesList.push(expense);
   localStorage.setItem("Storaged-Expenses", JSON.stringify(ExpensesList));
-
+  
+  clearCalendar();
+  renderCalendar(currentYear, currentMonth);
   loadExpenses();
 }
 
@@ -140,14 +146,28 @@ class Expense {
   };
 }
 
+function ClearExpenses(paymentDate){
+  var ExpensesList = document.getElementById("#" + paymentDate);
+  console.log(paymentDate);
+  console.log(ExpensesList);
+  // ExpensesList.innerHTML = "";
+
+}
+
 
 // Event listener for calendar date click
 $("td").on("click", function (event) {
+  console.log(selectedDayElement);
   var paymentDate = $(this)[0].firstChild.textContent;
-  var selectedDay = $(this);
+  // var selectedDayElement = $('#' + paymentDate);
+
+  console.log("PaymentDate Creation: " + paymentDate);
+  var selectedDayElement = document.getElementById(paymentDate);
+  console.log(document.getElementById(paymentDate));
 
   console.log(paymentDate);
-  console.log("Calendar: " + selectedDay);
+  console.log(selectedDayElement);
+  console.log("Calendar: " + selectedDayElement);
 
   // This will change the modal from hidden to display
   $("#modal").toggleClass("modal-display");
@@ -155,47 +175,54 @@ $("td").on("click", function (event) {
   // Submit information
   $("#modal-button-submit").on("click", function (event) {
     event.preventDefault();
-    getModalInformation(selectedDay);
-    clearModal();
+    getModalInformation(selectedDayElement, paymentDate);
+    clearModal(selectedDayElement, paymentDate);
   });
 
   // Cancel modal
   $("#modal-button-cancel").on("click", function (event) {
     event.preventDefault();
-    clearModal();
+    clearModal(selectedDayElement, paymentDate);
   });
 });
 
 // Get info from modal
-function getModalInformation(selectedDay, paymentDate) {
+function getModalInformation(selectedDayElement, paymentDate) {
   var ExpenseName = $("#expense-name").val();
   var ExpenseAmount = $("#expense-amount").val();
   var ExpenseFrecuency = $("#select-frequency").val();
   var ExpenseCategory = $("#select-category").val();
-  var ExpenseDate = selectedDay.text();
+  var ExpenseDate = "08/" + paymentDate + "/2020";
 
-  console.log("Get Modal Info: " + selectedDay);
+  console.log("Get Modal Info: " + paymentDate);
   // Just a whole bunch of sanity checks
   console.log(ExpenseName);
   console.log(ExpenseAmount);
   console.log(ExpenseFrecuency);
   console.log(ExpenseCategory);
 
-  var newText = document.createElement('p');
-  newText.textContent = (" " + ExpenseName + " " + ExpenseAmount);
-  selectedDay.append(newText);
+  console.log("TEST: " + paymentDate);
+  console.log("TEST: " + selectedDayElement);
+
+  // var newText = document.createElement('p');
+  // newText.textContent = (" " + ExpenseName + " " + ExpenseAmount);
+  // newText.setAttribute('id', "p" + ExpenseDate);
+  // selectedDayElement = document.getElementById(paymentDate);
+  // selectedDayElement.append(newText);
 
   const newExpense = new Expense(ExpenseDate,"place",ExpenseName,ExpenseAmount,ExpenseCategory,ExpenseFrecuency);
 
+  // ClearExpenses(paymentDate);
   SetExpense(newExpense);
   clearModal();
 }
 
 // Clear modal on close
-function clearModal() {
+function clearModal(selectedDayElement, paymentDate) {
   // This will change the modal to hidden
-  selectedDay = "";
-  console.log("Clear Modal: " + selectedDay);
+  paymentDate = "";
+  selectedDayElement = "";
+  console.log("Clear Modal: " + paymentDate);
   $("#modal").addClass("modal-display");
   $("#expense-name").val("");
   $("#expense-amount").val("");
