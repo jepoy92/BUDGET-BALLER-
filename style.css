@@ -13,6 +13,7 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border: none;
+    font-weight: 1000px;
   }
   
   #bank-card-cash-container:hover {
@@ -115,7 +116,7 @@ button:hover {
     margin-left:auto;
     margin-right:auto;
     margin-top: auto;
-    width: 450px;
+    width: 100%;
     font-size: 18px;
     text-align: center;
     line-height: 12px;
@@ -208,10 +209,6 @@ p {
 #month-name {
     color:blue;
     font-family: 'Bangers', cursive;
-}
-
-.button {
-    
 }
 
 
