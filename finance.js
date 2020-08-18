@@ -466,7 +466,7 @@ function SetCatergories(){
 
 /* Program Starts Here */
 //demo cash storage
-SetCashStorage("500");
+SetCashStorage("800");
 
 //load the money info from differents sources
 loadMoneyInfo();
