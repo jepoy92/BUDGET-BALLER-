@@ -204,7 +204,6 @@ function loadIncomes(){
 function ClearExpenses(){
     var ExpensesList = document.getElementById("Expenses-List");
         ExpensesList.innerHTML = "";
-
 }
 
 
