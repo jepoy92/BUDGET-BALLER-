@@ -4,9 +4,13 @@ body{
 }
 
 #nav-bar {
-    background-color: #dddddd;
+    background-image: linear-gradient(to right, blue, white);
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     overflow: auto;
+}
+
+#nav-gradient {
+    
 }
 
 
@@ -102,7 +106,6 @@ button:hover {
     color: black;
     font-size: 58px;
     background-color:lightgoldenrodyellow;
-    opacity:100%;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
@@ -220,17 +223,17 @@ p {
 }
 
 #balance-dollar-sign {
-    margin-left:100%;
+    margin-left:175%;
     width:auto;
     height:auto;
 }
 
 #Bank-Amount {
-    margin-right: 30%;
+    margin-right: 35%;
 }
 
 #Balance-Amount{
-    margin-right:auto;
+    margin-right: 25%;
 }
 
 #Cards-Container {
