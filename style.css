@@ -110,10 +110,15 @@ button:hover {
     font-weight: bold;
     font-size: 50px;
 }
+
+.IncomesOutcomes p {
+font-size:34px;
+font-weight:bold;
+}
 #Incomes-Container {
     background-color:green;
     opacity: 75%;
-    border-radius: 15px;
+    border-radius: 10px;
     height: auto;
     padding-bottom: auto;
     text-align: center;
@@ -146,7 +151,7 @@ button:hover {
     background-color: red;
     opacity: 60%;
     color: white;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 #Outcomes-Container table {
@@ -216,7 +221,9 @@ p {
 }
 
 #balance-dollar-sign {
-    margin-left:170%
+    margin-left:100%;
+    width:auto;
+    height:auto;
 }
 
 #Bank-Amount {
@@ -224,7 +231,7 @@ p {
 }
 
 #Balance-Amount{
-    margin-right:25%
+    margin-right:auto;
 }
 
 #Cards-Container {
@@ -495,6 +502,13 @@ div.budget-car-card {
 div.budget-cards {
     border-radius: 10px;
     padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border: none;
+}
+
+div.budget-cards:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 div.budget-cards label {
@@ -513,4 +527,11 @@ div.budget-cards p {
 
 div.budget-cards label h3 {
     font-weight: 600;
+}
+
+@media all and (max-width:500px) {
+    body{
+        text-align: center;
+        float: inline-start;
+    } 
 }
