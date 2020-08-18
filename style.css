@@ -104,12 +104,13 @@ button:hover {
     opacity: 75%;
     border-radius: 15px;
     height: auto;
-    width:100%;
+    width:50%;
     padding-bottom: auto;
     text-align: center;
     font-size: 24px;
     color: white;
 }
+
 
 #Incomes-Container table {
     opacity: 95%;
