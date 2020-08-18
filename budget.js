@@ -178,7 +178,7 @@ $("#modal3-button-submit").click( function(event){
 });
 
 // button cancel for the modal
-$("#modal2-button-cancel").click( function(event){
+$("#modal3-button-cancel").click( function(event){
     
     clearModal3();
 
