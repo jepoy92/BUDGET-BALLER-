@@ -1,5 +1,4 @@
 body{
-    font-family: 'Bangers';
     box-sizing: border-box;
 }
 
@@ -268,13 +267,12 @@ p {
 /*added container with background image*/
 .container-full {
     background-image: url("Assets/cashbanner.jpg");
-    font-family: 'Bangers';
 }
 
 /*added month-name styling w/google fonts*/
 #month-name {
     color:blue;
-    font-family: 'Bangers', cursive;
+    /* font-family: , cursive; */
 }
 
 
