@@ -5,7 +5,8 @@ body{
 }
 
 #nav-bar {
-    background-color: #0080ff;
+    background-color: #dddddd;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 
@@ -23,7 +24,7 @@ body{
     padding: 2px 16px;
   }
 
-.button success{
+.button {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -41,7 +42,7 @@ button:hover {
     font-size: 24px;
     font-style: italic;
     justify-content: center;
-    font-family: 'Bangers';
+    color:white;
 }
 
 #BudgetBallers {
@@ -51,8 +52,6 @@ button:hover {
     content: center;
     margin-top: 5px;
     font-style: italic;
-
-    font-family: 'Bangers';
 }
 
 .first-card {
@@ -184,6 +183,7 @@ p {
     margin-left:100%;
     width:auto;
     height: auto;
+    margin-top:10%;
 
 }
 
