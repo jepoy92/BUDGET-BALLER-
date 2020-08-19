@@ -13,7 +13,7 @@ function loadTotalBudgets (){
         var totalHome = document.getElementById("total-home");
         var totalCar = document.getElementById("total-car");
 
-        totalEntertainment.textContent = StoragedBudgets.entertainment ;
+        totalEntertainment.textContent = StoragedBudgets.entertainment;
         totalTravel.textContent = StoragedBudgets.travel;
         totalFood.textContent = StoragedBudgets.food;
         totalHome.textContent = StoragedBudgets.home;
@@ -41,11 +41,11 @@ function loadSpentMoney(){
         console.log("vvvvvvvvvvv CATEGORIES EXPENSES vvvvvvvvvv");
         console.log(storedExpenses);
 
-        currentEntertainment.textContent = storedExpenses.entertainment;
-        currentTravel.textContent = storedExpenses.travel;
-        currentFood.textContent = storedExpenses.food;
-        currentHome.textContent = storedExpenses.home;
-        currentCar.textContent = storedExpenses.car;
+        currentEntertainment.textContent = storedExpenses.entertainment + " $";
+        currentTravel.textContent = storedExpenses.travel+ " $";
+        currentFood.textContent = storedExpenses.food+ " $";
+        currentHome.textContent = storedExpenses.home+ " $";
+        currentCar.textContent = storedExpenses.car+ " $";
 
         
         
