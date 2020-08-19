@@ -24,9 +24,7 @@ This project was made in collaboration with:
 
 
 ### Calendar
-The calendar was built using Kim Heidorn's calendar as a guide through her explanation on dev.to. The bare minimum of html was coded to make creating the calendar easier but the majority of it is generated through JavaScript.
-
-
+The calendar was built using Kim Heidorn's calendar as a guide through her explanation on [Dev.to/](https://dev.to/). The bare minimum of html was coded to make creating the calendar easier but the majority of it is generated through JavaScript using the built in ```Date()``` object.
 
 [Kim Heidorn Calendar Walkthrough](https://dev.to/knheidorn/making-a-calendar-in-vanilla-javascript-48j8)
 
