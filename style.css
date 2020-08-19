@@ -3,14 +3,12 @@ body{
 }
 
 #nav-bar {
-    background-image: linear-gradient(to right, blue, white);
+    /* background-image: linear-gradient(to right, blue, white); */
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     overflow: auto;
+    background-color:#b9d6ea;
 }
 
-#nav-gradient {
-    
-}
 
 
 #bank-card-cash-container {
@@ -48,8 +46,13 @@ button:hover {
     font-size: 24px;
     font-style: italic;
     justify-content: center;
-    color:white;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: auto;
+    margin-top:auto;
+    padding-top: auto;
 }
+
 
 #BudgetBallers {
     float: left;
@@ -302,6 +305,7 @@ p {
 #Budget-Button {
     margin-top: auto;
     margin-bottom:auto;
+    margin-left: 43%
 }
 
 progress {
@@ -427,7 +431,7 @@ h5 {
 
 .calendar-container-div {
     margin: auto;
-    width: 50%;
+    width: 78%;
     margin-top: 50px;
 }
 

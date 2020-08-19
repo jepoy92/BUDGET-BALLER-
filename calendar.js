@@ -186,10 +186,17 @@ function getModalInformation(selectedDayElement, paymentDate) {
   var ExpenseAmount = $("#expense-amount").val();
   var ExpenseFrecuency = $("#select-frequency").val();
   var ExpenseCategory = $("#select-category").val();
+  var ExpensePlace= "";
+    if(document.getElementById("bank-radio").checked == true)
+        ExpensePlace = "bank";
+    if(document.getElementById("card-radio").checked == true)
+        ExpensePlace = "card";
+    if(document.getElementById("cash-radio").checked == true)
+        ExpensePlace = "cash";
   // Remember to remove and fix this later!!!!!!!!
   var ExpenseDate = "08/" + paymentDate + "/2020";
 
-  const newExpense = new Expense(ExpenseDate,"place",ExpenseName,ExpenseAmount,ExpenseCategory,ExpenseFrecuency);
+  const newExpense = new Expense(ExpenseDate,ExpensePlace,ExpenseName,ExpenseAmount,ExpenseCategory,ExpenseFrecuency);
 
   // ClearExpenses(paymentDate);
   SetExpense(newExpense);
@@ -201,7 +208,9 @@ function clearModal(selectedDayElement, paymentDate) {
   // This will change the modal to hidden
   paymentDate = "";
   selectedDayElement = "";
-  console.log("Clear Modal: " + paymentDate);
+  document.getElementById("bank-radio").checked = false;    
+  document.getElementById("card-radio").checked = false;
+  document.getElementById("cash-radio").checked = false;
   $("#modal").addClass("modal-display");
   $("#expense-name").val("");
   $("#expense-amount").val("");
