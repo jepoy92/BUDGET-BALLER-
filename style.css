@@ -269,9 +269,10 @@ p {
 
 /*added container with background image*/
 .container-full {
-    background-color: brown;
+    background-color: #417DB0;
     color:black;
     font-weight:bold;
+    border: 1px black solid
 }
 
 /*added month-name styling w/google fonts*/
@@ -440,7 +441,7 @@ h5 {
 #previous-month {
     width: auto;
     height: 50px;
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 5%;
     margin-top:10%;
     line-height:1px;
@@ -451,7 +452,7 @@ h5 {
 #next-month {
     width: auto;
     height: 50px;
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 5%;
     margin-top:10%;
     line-height:1px;
@@ -462,9 +463,9 @@ h5 {
 .calendar-heading {
     font-size: 35px;
     padding: 25px;
-    border: 5px solid black;
-    background-color: #FFAE00;
-    box-shadow: 8px 8px 16px 16px rgba(0,0,0,0.2);
+    border: 3px solid black;
+    background-color: #3ADB76;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 .weekday {
@@ -480,7 +481,6 @@ h5 {
     padding-left: 5px;
     padding-top: 5px;
     font-weight:bold;
-    background-image:linear-gradient(#ffdf59,#fff7e6, white)
 }
 
 .calendar-ptag {
