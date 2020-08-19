@@ -3,7 +3,6 @@
 var currentYear = new Date().getFullYear();
 var currentMonth = new Date().getMonth();
 var currentDay = new Date().getDate()
-console.log(currentDay);
 
 // Function to build the calendar
 function renderCalendar(year, month) {
@@ -82,7 +81,6 @@ $("#previous-month").on("click", function () {
   currentMonth--;
   clearCalendar();
   renderCalendar(currentYear, currentMonth);
-  console.log(currentMonth);
   if (prevMonth === currentMonth) {
     loadExpenses();
   }
@@ -94,7 +92,6 @@ $("#next-month").on("click", function () {
   currentMonth++;
   clearCalendar();
   renderCalendar(currentYear, currentMonth);
-  console.log(currentMonth);
   if (nextMonth === currentMonth) {
     loadExpenses();
   }
@@ -110,16 +107,11 @@ function clearCalendar() {
 function loadExpenses() {
   if(JSON.parse(localStorage.getItem("Storaged-Expenses"))){
       var StoragedExpenses = JSON.parse(localStorage.getItem("Storaged-Expenses"));
-      console.log(StoragedExpenses);
       
       StoragedExpenses.forEach(element => {
           var newDate = moment(element.date).format('DD');
           var newName = element.name;
           var newAmount = element.amount;
-
-          console.log(element);
-          console.log(newDate);
-          console.log(element.date);
 
           var newText = document.createElement('p');
           newText.textContent = (" " + newName + " $" + newAmount);
@@ -129,7 +121,7 @@ function loadExpenses() {
       });
   }
   else
-      console.log("not storaged");
+      console.log("No Stored Data");
 }
 
 // Load Expenses when page is loaded
