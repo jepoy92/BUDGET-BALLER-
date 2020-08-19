@@ -5,6 +5,11 @@
 Budget Baller is a site that allows you to manage your budget like a "Baller". Through the use of {{{API NAME HERE}}} and {{{API NAME HERE}}}
 
 ## Usage
+The homepage is designed with the intention of showing a list of incomes, expenses, and remaining balance of income minus expenses. The navbar navigates between this page, the calendar and the budget page. The user can click on the add income button in the income card to display a modal, allowing you to report income in any of the accounts, updating the total for the corresponding account, total balance, and list of incomes. The same can be done in the expenses category, updating the balance display and list of expenses. The add an expense modal also allows you to categorize your expenses as a food, home, travel, car, or entertainment expense to be used in the budget page. 
+
+The budget page exists to give a clear display of the user's recorded expenses compared against a budget total set by the user. These expenses are grouped by the categories set when recording an expense and displayed as a series of progress bars, with zero percent being no recorded expenses in that category and one hunderd percent representing the user reaching or exceeding their monthly expenses for that category. The amount spent display is the sum total of all expenses recorded within a category and the budget total display is the limit set by the user. To set the budget, the user can click the add budgets button and set a limit for each category. The amount spent is automatically updated once an expense is recorded.
+
+The calendar page displays a monthly calendar for the current year and will display all expenses and their future payments (if a payment is reccuring) to give an at a glance view of what and when a user can be expected to pay a bill on time. Each month accurately displays the number of days in the month and the corresponding day of the week. The calendar page also allows you to add future or past payments by clicking on a specific date in the calendar. 
 
 ## Credit
 This project was made in collaboration with:
@@ -17,8 +22,11 @@ This project was made in collaboration with:
 
 ## Homepage
 
+
 ### Calendar
 The calendar was built using Kim Heidorn's calendar as a guide through her explanation on dev.to. The bare minimum of html was coded to make creating the calendar easier but the majority of it is generated through JavaScript.
+
+
 
 [Kim Heidorn Calendar Walkthrough](https://dev.to/knheidorn/making-a-calendar-in-vanilla-javascript-48j8)
 

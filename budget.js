@@ -13,7 +13,7 @@ function loadTotalBudgets (){
         var totalHome = document.getElementById("total-home");
         var totalCar = document.getElementById("total-car");
 
-        totalEntertainment.textContent = StoragedBudgets.entertainment;
+        totalEntertainment.textContent = StoragedBudgets.entertainment ;
         totalTravel.textContent = StoragedBudgets.travel;
         totalFood.textContent = StoragedBudgets.food;
         totalHome.textContent = StoragedBudgets.home;
@@ -95,6 +95,12 @@ function calculateBudgets(){
     FoodBar.setAttribute("value",calcProgressBar(currentFood.textContent,totalFood.textContent));
     HomeBar.setAttribute("value",calcProgressBar(currentHome.textContent,totalHome.textContent));
     CarBar.setAttribute("value",calcProgressBar(currentCar.textContent,totalCar.textContent));
+
+    $("#porcentage-Entertainment").text(calcProgressBar(currentEntertainment.textContent,totalEntertainment.textContent) + " %");
+    $("#porcentage-Travel").text(calcProgressBar(currentTravel.textContent,totalTravel.textContent)+ " %");
+    $("#porcentage-Food").text(calcProgressBar(currentFood.textContent,totalFood.textContent)+ " %");
+    $("#porcentage-Home").text(calcProgressBar(currentHome.textContent,totalHome.textContent)+ " %");
+    $("#porcentage-Car").text(calcProgressBar(currentCar.textContent,totalCar.textContent)+ " %");
 
 
 }
