@@ -2,6 +2,8 @@
 // Set current year and month to variables
 var currentYear = new Date().getFullYear();
 var currentMonth = new Date().getMonth();
+var currentDay = new Date().getDate()
+console.log(currentDay);
 
 // Function to build the calendar
 function renderCalendar(year, month) {
@@ -47,6 +49,14 @@ function renderCalendar(year, month) {
         let td = document.createElement("td");
         td.setAttribute("id", renderNum);
         td.setAttribute("class", "calendar-table-data");
+
+        if (renderNum < currentDay) {
+          td.setAttribute('style', 'border: 2px solid black; width: 150px; height: 100px; padding-left: 5px; padding-top: 5px; font-weight:bold; background-color: lightgrey; opacity: 75%;');
+        } else if (renderNum === currentDay) {
+          td.setAttribute('style', 'border: 2px solid black; width: 150px; height: 100px; padding-left: 5px; padding-top: 5px; font-weight:bold; background-color: lightgreen;');
+        } else if (renderNum > currentDay) {
+          td.setAttribute('style', 'border: 2px solid black; width: 150px; height: 100px; padding-left: 5px; padding-top: 5px; font-weight:bold; background-color: lightblue;');
+        }
 
         // This will hold the date of each day
         let pTag = document.createElement("p");

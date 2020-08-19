@@ -474,14 +474,12 @@ h5 {
     width: 150px;
 }
 
-.calendar-table-data {
+.empty {
     border: 2px solid black;
     width: 150px;
     height: 100px;
     padding-left: 5px;
     padding-top: 5px;
-    font-weight:bold;
-    background-image:linear-gradient(#FFDF59,#FFF7E6, white)
 }
 
 .calendar-ptag {
