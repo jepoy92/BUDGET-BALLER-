@@ -457,7 +457,7 @@ function SetCatergories(){
 
         }
     else
-        console.log("No Categories Storaged");
+        console.log("No CATEGORIES Storaged");
 
 
 
@@ -466,7 +466,7 @@ function SetCatergories(){
 
 /* Program Starts Here */
 //demo cash storage
-SetCashStorage("800");
+SetCashStorage("700");
 
 //load the money info from differents sources
 loadMoneyInfo();
