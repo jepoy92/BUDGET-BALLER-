@@ -1,5 +1,6 @@
 # BUDGET-BALLER-
 [Deployed Site](https://jepoy92.github.io/BUDGET-BALLER-/index.html)
+![App photo](../Assets/App-photo.PNG)
 
 ## About
 Budget Baller is a site that allows you to manage your budget like a "Baller". Through the use of {{{API NAME HERE}}} and {{{API NAME HERE}}}
