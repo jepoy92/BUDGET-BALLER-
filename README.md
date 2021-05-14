@@ -3,7 +3,7 @@
 ![App photo](../Assets/App-photo.PNG)
 
 ## About
-Budget Baller is a site that allows you to manage your budget like a "Baller". Through the use of {{{API NAME HERE}}} and {{{API NAME HERE}}}
+Budget Baller is a site that allows you to manage your budget like a "Baller".
 
 ## Usage
 The homepage is designed with the intention of showing a list of incomes, expenses, and remaining balance of income minus expenses. The navbar navigates between this page, the calendar and the budget page. The user can click on the add income button in the income card to display a modal, allowing you to report income in any of the accounts, updating the total for the corresponding account, total balance, and list of incomes. The same can be done in the expenses category, updating the balance display and list of expenses. The add an expense modal also allows you to categorize your expenses as a food, home, travel, car, or entertainment expense to be used in the budget page. 
